@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2691623-bf8c-44c1-b968-7673b82d80cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/about.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/layouts/blocks/footer/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/layouts/blocks/nav/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/layouts/default.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/showusers.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/users.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,12 +146,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\OSPanel\domains\testlocal\resources\views\products\layouts" />
-      <recent name="G:\OSPanel\domains\testlocal\app\Models" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\OSPanel\domains\testlocal\resources\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\OSPanel\domains\localhost\app\Models\UserModel" />
+      <recent name="G:\OSPanel\domains\testlocal\resources\views\products\layouts" />
+      <recent name="G:\OSPanel\domains\testlocal\app\Models" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
@@ -203,7 +194,7 @@
       <workItem from="1584866537845" duration="5801000" />
       <workItem from="1584888248125" duration="8346000" />
       <workItem from="1584896932930" duration="959000" />
-      <workItem from="1585165837937" duration="572000" />
+      <workItem from="1585165837937" duration="2027000" />
     </task>
     <servers />
   </component>
@@ -247,10 +238,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="447" y="178" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1584658196633" />
-    <state x="517" y="283" key="NewPhpFileDialog" timestamp="1584891214663">
+    <state x="517" y="283" key="NewPhpFileDialog" timestamp="1585168782666">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1584891214663" />
+    <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1585168782666" />
     <state x="186" y="9" key="SettingsEditor" timestamp="1584825997993">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

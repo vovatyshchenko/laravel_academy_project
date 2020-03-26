@@ -20,4 +20,8 @@ class ViewsController extends Controller
     {
         return view('admin');
     }
+    public function staff()
+    {
+        return view('staff');
+    }
 }
