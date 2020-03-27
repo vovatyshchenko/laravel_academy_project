@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'ViewsController@index');
 Route::get('/about', 'ViewsController@about');
 Route::get('/admin', 'ViewsController@admin');
-Route::get('/staff', 'ViewsController@staff');
+Route::get('admin/staff', 'ViewsController@staff');
+Route::get('admin/services', 'ViewsController@services');
+Route::get('admin/schedule', 'ViewsController@schedule');
