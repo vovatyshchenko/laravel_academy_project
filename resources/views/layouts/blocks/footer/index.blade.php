@@ -1,4 +1,4 @@
-<footer class="footer fixed-bottom position-absolute">
+<footer class="footer">
     <div class="container">
         <div class="row">
             <hr>

@@ -31,6 +31,26 @@
 <button type="submit" class="btn btn-primary btn-lg btn-block">Добавить</button>
 </main>
 </div>
+        <div class="row">
+            <table class="table">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($services as $service)
+                    <tr>
+                        <th scope="row">{{ $loop->iteration }}</th>
+                        <td>{{ $service->name }}</td>
+                        <td>{{ $service->price }}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div>
 </div>
-   </div><!--<div id="layoutSidenav">--> 
+   </div><!--<div id="layoutSidenav">-->
 @endsection

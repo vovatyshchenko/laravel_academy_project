@@ -48,16 +48,44 @@
     <label class="input-group-text" for="inputGroupSelect01">Специализация</label>
   </div>
   <select class="custom-select" id="inputGroupSelect01">
-    <option value="1">Парикмахер</option>
-    <option value="2">Барбер</option>
-    <option value="3">Может все</option>
+      @foreach($services as $service)
+        <option value="{{ $loop->iteration }}">{{ $service->name }}</option>
+      @endforeach
   </select>
 </div>
 <button type="button" class="btn btn-primary btn-lg btn-block">Добавить</button>
+
 </main>
 </div>
+    <div class="row">
+        <table class="table">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Patronymic</th>
+                <th scope="col">Birth day</th>
+                <th scope="col">Position</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($masters as $master)
+                <tr>
+                    <th scope="row">{{ $loop->iteration }}</th>
+                    <td>{{ $master->name }}</td>
+                    <td>{{ $master->surname }}</td>
+                    <td>{{ $master->patronymic }}</td>
+                    <td>{{ $master->b_day }}</td>
+                    <td>{{ $position->name }}</td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
 </div>
+
 </main>
                </div>
-   </div><!--<div id="layoutSidenav">--> 
+   </div><!--<div id="layoutSidenav">-->
 @endsection

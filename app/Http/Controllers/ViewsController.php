@@ -21,15 +21,12 @@ class ViewsController extends Controller
         return view('admin');
     }
 
-    public function staff()
+    /*public function staff()
     {
         return view('staff');
-    }
+    }*/
 
-    public function services()
-    {
-        return view('services');
-    }
+    /
     public function schedule()
     {
         return view('schedule');
