@@ -16,19 +16,19 @@ class ViewsController extends Controller
         return view('about');
     }
 
-    public function admin()
+    /*public function admin()
     {
         return view('admin');
-    }
+    }*/
 
     /*public function staff()
     {
         return view('staff');
     }*/
 
-    /
-    public function schedule()
+    
+    /*public function schedule()
     {
         return view('schedule');
-    }
+    }*/
 }

@@ -22,9 +22,9 @@
     <label class="input-group-text" for="inputGroupSelect01">Мастер</label>
   </div>
   <select class="custom-select" id="inputGroupSelect01">
-    <option value="1">Имя1</option>
-    <option value="2">Имя2</option>
-    <option value="3">Имя3</option>
+	@foreach($masterName as $master)
+    	<option value={{ $loop->iteration }}</option>{{ $master->name }}</option>
+	@endforeach
   </select>
 </div>
 <div class="input-group mb-3">
@@ -50,21 +50,13 @@
 	                            <th>Дата</th>
 	                        </tr>
 	                    </thead>
-	                    <tfoot>
-	                        <tr>
-	                            <th>Имя</th>
-	                            <th>Дата</th>
-	                        </tr>
-	                    </tfoot>
 	                    <tbody>
+						@foreach($schedules as $schedule)
 	                        <tr>
-	                            <td>Tiger Nixon</td>  
-	                            <td>2020/03/27</td>
+	                            <td>{{ $schedule->name }}</td>  
+	                            <td>{{ $schedule->data }}</td>
 	                        </tr>
-	                        <tr>
-	                            <td>Tiger Nixon</td>  
-	                            <td>2020/03/27</td>
-	                        </tr>
+						@endforeach
 	                    </tbody>
 	                </table>
 	            </div>

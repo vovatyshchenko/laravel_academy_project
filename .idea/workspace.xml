@@ -3,18 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c2691623-bf8c-44c1-b968-7673b82d80cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MasterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MasterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ViewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ViewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserModel/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_25_160010_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_25_160010_create_orders_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/OrdersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/OrdersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/blocks/footer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/blocks/footer/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/services.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedule.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/staff.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/staff.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -212,6 +207,7 @@
       <workItem from="1585343997789" duration="10030000" />
       <workItem from="1585355257049" duration="4446000" />
       <workItem from="1585427898254" duration="16735000" />
+      <workItem from="1585475046172" duration="1108000" />
     </task>
     <servers />
   </component>

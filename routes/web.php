@@ -15,11 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'ViewsController@index');
 Route::get('/about', 'ViewsController@about');
-Route::get('/admin', 'ViewsController@admin');
+//Route::get('/admin', 'ViewsController@admin');
 //Route::get('admin/staff', 'ViewsController@staff');
-Route::get('admin/services', 'ViewsController@services');
-Route::get('admin/schedule', 'ViewsController@schedule');
+//Route::get('admin/services', 'ViewsController@services');
+//Route::get('admin/schedule', 'ViewsController@schedule');
 
 Route::resource('users', 'UserController');
 Route::resource('admin/staff', 'MasterController');
 Route::resource('admin/services', 'ServiceController');
+Route::resource('admin/schedule', 'ScheduleController');
+Route::resource('admin', 'OrderController');

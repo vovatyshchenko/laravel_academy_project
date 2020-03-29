@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Master;
+use App\Models\Schedule;
 use Illuminate\Http\Request;
 
-class MasterController extends Controller
+class ScheduleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,8 @@ class MasterController extends Controller
      */
     public function index()
     {
-        $masters = Master::all();
-        $position = Master::first()->position;
-        return view('staff', compact('masters', 'position'));
+        $schedules = Schedule::all();
+        return view('schedule', compact('schedules'));
     }
 
     /**
@@ -43,10 +42,10 @@ class MasterController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Master  $master
+     * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function show(Master $master)
+    public function show(Schedule $schedule)
     {
         //
     }
@@ -54,10 +53,10 @@ class MasterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Master  $master
+     * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function edit(Master $master)
+    public function edit(Schedule $schedule)
     {
         //
     }
@@ -66,10 +65,10 @@ class MasterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Master  $master
+     * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Master $master)
+    public function update(Request $request, Schedule $schedule)
     {
         //
     }
@@ -77,10 +76,10 @@ class MasterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Master  $master
+     * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Master $master)
+    public function destroy(Schedule $schedule)
     {
         //
     }

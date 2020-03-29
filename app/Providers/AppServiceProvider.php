@@ -2,7 +2,8 @@
 
 namespace App\Providers;
 
-use App\Models\Service;
+use App\Models\Position;
+use App\Models\Master;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,7 +25,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $services = Service::all();
-        view()->share('services', $services);
+        $positions = Position::all();
+        view()->share('positions', $positions);
+
+        $masterName = Master::all();
+        view()->share('masterName', $masterName);
     }
 }

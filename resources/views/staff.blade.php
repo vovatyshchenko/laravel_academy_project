@@ -48,8 +48,8 @@
     <label class="input-group-text" for="inputGroupSelect01">Специализация</label>
   </div>
   <select class="custom-select" id="inputGroupSelect01">
-      @foreach($services as $service)
-        <option value="{{ $loop->iteration }}">{{ $service->name }}</option>
+      @foreach($positions as $position)
+        <option value={{ $loop->iteration }}>{{ $position->name }}</option>
       @endforeach
   </select>
 </div>
