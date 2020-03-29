@@ -4,7 +4,7 @@
 <div id="layoutSidenav_content">
                 <main>
            <div class="card mb-4">
-<div class="container-fluid">
+<div class="container-fluid px-0 py-0">
   <div class="row">
     <div class="alert alert-primary col-12 text-center font-weight-bold" role="alert">
           Работник добавлен успешно!

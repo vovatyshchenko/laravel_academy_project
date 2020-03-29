@@ -37110,11 +37110,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-(function ($) {
-  "use strict"; // Add active state to sidbar nav links
+$(document).ready(function ($) {
+  "use strict"; // Add class active
 
-  var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
-
+  var path = window.location.href;
   $("#layoutSidenav_nav .sb-sidenav a.nav-link").each(function () {
     if (this.href === path) {
       $(this).addClass("active");
@@ -37125,21 +37124,19 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     e.preventDefault();
     $("body").toggleClass("sb-sidenav-toggled");
   });
-});
+}); //Use DataTable
 
 $(document).ready(function () {
   $('#dataTable').DataTable();
-});
-$(function () {
+}); //Use daterangepicker
+
+$(document).ready(function () {
   $('input[name="birthday"]').daterangepicker({
     singleDatePicker: true,
-    showDropdowns: true //minYear: 1901,
-    //maxYear: parseInt(moment().format('YYYY'),10)
-
-  }); //function(start, end, label) {
-  //let years = moment().diff(start, 'years');
-  //alert("You are " + years + " years old!");
-  //});
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'), 10)
+  });
 });
 
 /***/ }),
@@ -37151,7 +37148,7 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Can't find stylesheet to import.\n   ╷\n10 │ @import 'common';\n   │         ^^^^^^^^\n   ╵\n  g:\\OSPanel\\domains\\localhost\\resources\\sass\\app.scss 10:9  root stylesheet\n    at g:\\OSPanel\\domains\\localhost\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at g:\\OSPanel\\domains\\localhost\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at g:\\OSPanel\\domains\\localhost\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (g:\\OSPanel\\domains\\localhost\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at g:\\OSPanel\\domains\\localhost\\node_modules\\sass-loader\\dist\\index.js:73:7\n    at Function.call$2 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:87203:16)\n    at _render_closure1.call$2 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:76994:12)\n    at _RootZone.runBinary$3$3 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:25521:18)\n    at _RootZone.runBinary$3 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:25525:19)\n    at _FutureListener.handleError$1 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:23975:19)\n    at _Future__propagateToListeners_handleError.call$0 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:24271:40)\n    at Object._Future__propagateToListeners (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:3500:88)\n    at _Future._completeError$2 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:24099:9)\n    at _AsyncAwaitCompleter.completeError$2 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:23491:12)\n    at Object._asyncRethrow (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:3256:17)\n    at g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:13326:20\n    at _wrapJsFunctionForAsync_closure.$protected (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:3279:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:23512:12)\n    at _awaitOnObject_closure0.call$2 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:23504:25)\n    at _RootZone.runBinary$3$3 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:25521:18)\n    at _RootZone.runBinary$3 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:25525:19)\n    at _FutureListener.handleError$1 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:23975:19)\n    at _Future__propagateToListeners_handleError.call$0 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:24271:40)\n    at Object._Future__propagateToListeners (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:3500:88)\n    at _Future._completeError$2 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:24099:9)\n    at _AsyncAwaitCompleter.completeError$2 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:23491:12)\n    at Object._asyncRethrow (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:3256:17)\n    at g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:15981:20\n    at _wrapJsFunctionForAsync_closure.$protected (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:3279:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:23512:12)\n    at _awaitOnObject_closure0.call$2 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:23504:25)\n    at _RootZone.runBinary$3$3 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:25521:18)\n    at _RootZone.runBinary$3 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:25525:19)\n    at _FutureListener.handleError$1 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:23975:19)\n    at _Future__propagateToListeners_handleError.call$0 (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:24271:40)\n    at Object._Future__propagateToListeners (g:\\OSPanel\\domains\\localhost\\node_modules\\sass\\sass.dart.js:3500:88)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
