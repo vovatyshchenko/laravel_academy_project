@@ -5,15 +5,37 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ url('/') }}">Главная</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/about') }}">О нас</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/admin') }}">Админ панель</a>
-            </li>
+            @guest
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url('/') }}">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/about') }}">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/login') }}">Войти</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/register') }}">Зарегистрироваться</a>
+                </li>
+            @else
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url('/') }}">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/about') }}">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/admin') }}">Админ панель</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/logout') }}" onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();">Выход</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </li>
+            @endguest
         </ul>
     </div>
 </nav>

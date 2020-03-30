@@ -25,3 +25,7 @@ Route::resource('admin/staff', 'MasterController');
 Route::resource('admin/services', 'ServiceController');
 Route::resource('admin/schedule', 'ScheduleController');
 Route::resource('admin', 'OrderController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
