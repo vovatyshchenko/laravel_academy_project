@@ -53,7 +53,7 @@
                         @foreach($schedules as $schedule)
                             <tr>
                                 <td>{{ $schedule->name }}</td>
-                                <td>{{ $schedule->data }}</td>
+                                <td>{{ $schedule->date }}</td>
                             </tr>
                         @endforeach
                         </tbody>

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Position;
 use App\Models\Master;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
+{
         $positions = Position::all();
         view()->share('positions', $positions);
 

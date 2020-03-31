@@ -13,7 +13,7 @@ class SchedulesTableSeeder extends Seeder
     {
         DB::table('schedules')->insert([
             'name' => Str::random(10),
-            'data' => '2020-03-28 00:28:33',
+            'date' => '2020-03-28 00:28:33',
         ]);
     }
 }

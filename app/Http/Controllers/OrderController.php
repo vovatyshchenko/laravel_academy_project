@@ -15,16 +15,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        if (Auth::check()) {
-            $user = Auth::user();
             $orders = Order::all();
-            return view('admin', compact('orders','user'));
-        }
-        else {
-            return redirect('login');
-        }
-
-
+            return view('admin', compact('orders'));
     }
 
     /**

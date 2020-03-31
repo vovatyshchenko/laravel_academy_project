@@ -43,7 +43,7 @@
                                         <td>{{ $order->tel }}</td>
                                         <td>{{ $order->master }}</td>
                                         <td>{{ $order->service }}</td>
-                                        <td>{{ $order->data }}</td>
+                                        <td>{{ $order->date }}</td>
                                         <td>{{ $order->time }}</td>
                                         <td>{{ $order->price }}</td>
                                         <td><button type="button" class="btn btn-outline-success">Выполненно</button></td>

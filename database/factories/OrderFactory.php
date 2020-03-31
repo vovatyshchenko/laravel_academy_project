@@ -1,0 +1,19 @@
+<?php
+
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+
+use App\Models\Order;
+use Faker\Generator as Faker;
+
+$factory->define(Order::class, function (Faker $faker) {
+    return [
+        'name' => $faker->name,
+        'tel' => $faker->phoneNumber,
+        'master' => $faker->name,
+        'service' => $faker->randomLetter,
+        'date' => $faker->date(),
+        'time' => $faker->time(),
+        'price' => rand(1000, 4000) / 10,
+        'status' => $faker->boolean,
+    ];
+});

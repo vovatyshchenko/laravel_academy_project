@@ -25,9 +25,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/about') }}">О нас</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/admin') }}">Админ панель</a>
-                </li>
+                @if(Auth::user()->name == 'Admin')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/admin') }}">Админ панель</a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/logout') }}" onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">Выход</a>
