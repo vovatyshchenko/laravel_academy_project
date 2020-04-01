@@ -1,21 +1,23 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin\Services;
 
-use App\Models\Schedule;
+use App\Http\Controllers\Controller;
+use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
-class ScheduleController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(): View
     {
-        $schedules = Schedule::all();
-        return view('schedule', compact('schedules'));
+        $services = Service::all();
+        return view('admin.services.index', compact('services'));
     }
 
     /**
@@ -42,10 +44,10 @@ class ScheduleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Schedule  $schedule
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(Schedule $schedule)
+    public function show(Service $service)
     {
         //
     }
@@ -53,10 +55,10 @@ class ScheduleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Schedule  $schedule
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Schedule $schedule)
+    public function edit(Service $service)
     {
         //
     }
@@ -65,10 +67,10 @@ class ScheduleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Schedule  $schedule
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Schedule $schedule)
+    public function update(Request $request, Service $service)
     {
         //
     }
@@ -76,10 +78,10 @@ class ScheduleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Schedule  $schedule
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Schedule $schedule)
+    public function destroy(Service $service)
     {
         //
     }

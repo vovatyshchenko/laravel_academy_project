@@ -2,18 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2691623-bf8c-44c1-b968-7673b82d80cc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/testlocal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/testlocal.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/OrdersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/OrdersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/SchedulesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SchedulesTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/blocks/admin/nav/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/blocks/admin/nav/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MasterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PositionController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_28_005959_create_masters_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_005959_create_masters_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/blocks/admin/footer/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/blocks/admin/nav/index.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedule.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedule.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/default_admin.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedule.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/services.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/staff.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,6 +158,7 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZJqMiwojSniyT516DX1ykRS7xx" />
@@ -157,14 +177,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OSPanel\domains\testlocal\resources\views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\OSPanel\domains\localhost\app\Models" />
       <recent name="G:\OSPanel\domains\localhost\app\Models\UserModel" />
       <recent name="G:\OSPanel\domains\testlocal\resources\views\products\layouts" />
       <recent name="G:\OSPanel\domains\testlocal\app\Models" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\OSPanel\domains\testlocal\resources\views" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
@@ -214,6 +234,7 @@
       <workItem from="1585511168733" duration="7801000" />
       <workItem from="1585592529832" duration="9367000" />
       <workItem from="1585679052518" duration="11560000" />
+      <workItem from="1585757219401" duration="8869000" />
     </task>
     <servers />
   </component>
@@ -261,10 +282,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="447" y="178" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1585681205192" />
-    <state x="517" y="283" key="NewPhpFileDialog" timestamp="1585684562273">
+    <state x="517" y="283" key="NewPhpFileDialog" timestamp="1585764319277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1585684562273" />
+    <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1585764319277" />
     <state x="186" y="9" key="SettingsEditor" timestamp="1584825997993">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

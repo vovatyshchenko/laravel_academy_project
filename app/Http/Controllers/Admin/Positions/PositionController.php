@@ -1,22 +1,24 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin\Positions;
 
+use App\Http\Controllers\Controller;
 use App\Models\Master;
+use App\Models\Position;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
-class MasterController extends Controller
+class PositionController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(): View
     {
-        $masters = Master::all();
-        $position = Master::first()->position;
-        return view('staff', compact('masters', 'position'));
+        $positions = Position::all();
+        return view('admin.masters.blocks.form.index', compact('positions'));
     }
 
     /**
@@ -43,10 +45,10 @@ class MasterController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Master  $master
+     * @param  \App\Models\Position  $position
      * @return \Illuminate\Http\Response
      */
-    public function show(Master $master)
+    public function show(Position $position)
     {
         //
     }
@@ -54,10 +56,10 @@ class MasterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Master  $master
+     * @param  \App\Models\Position  $position
      * @return \Illuminate\Http\Response
      */
-    public function edit(Master $master)
+    public function edit(Position $position)
     {
         //
     }
@@ -66,10 +68,10 @@ class MasterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Master  $master
+     * @param  \App\Models\Position  $position
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Master $master)
+    public function update(Request $request, Position $position)
     {
         //
     }
@@ -77,10 +79,10 @@ class MasterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Master  $master
+     * @param  \App\Models\Position  $position
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Master $master)
+    public function destroy(Position $position)
     {
         //
     }

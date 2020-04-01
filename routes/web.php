@@ -14,24 +14,48 @@ use Illuminate\Support\Facades\Route;
 */
 Auth::routes();
 
-Route::get('/', 'ViewsController@index');
-Route::get('/about', 'ViewsController@about');
+Route::view('/', 'index')->name('index');
+
+Route::get('/about', 'ViewsController@about')->name('about');
 
 /**
  * Routes for Admin Panel
  */
-Route::prefix('admin')->middleware('role:admin@admin.com')
+
+Route::name('admin.')
+	->middleware('role:admin@admin.com')
+    ->namespace('Admin')
+    ->prefix('admin')
     ->group(function () {
-        Route::resource('/', 'OrderController');
-        Route::resource('staff', 'MasterController');
-        Route::resource('services', 'ServiceController');
-        Route::resource('schedule', 'ScheduleController');
+
+    	Route::view('/', 'admin.index');
+
+		Route::prefix('masters')
+			->name('masters.')
+			->namespace('Masters')
+			->group(function () {
+		    	Route::resource('/', 'MasterController');
+			});
+
+		Route::prefix('schedule')
+			->name('schedule.')
+			->namespace('Schedule')
+			->group(function () {
+		    	Route::resource('/', 'ScheduleController');
+			});
+
+		Route::prefix('services')
+			->name('services.')
+			->namespace('Services')
+			->group(function () {
+		    	Route::resource('/', 'ServiceController');
+			});
+
+		Route::prefix('orders')
+			->name('orders.')
+			->namespace('Orders')
+			->group(function () {
+		    	Route::resource('/', 'OrderController');
+			});
     });
 
-/*Route::resource('admin/staff', 'MasterController');
-Route::resource('admin/services', 'ServiceController');
-Route::resource('admin/schedule', 'ScheduleController');
-Route::resource('admin', 'OrderController')->middleware('auth');*/
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('users', 'UserController');

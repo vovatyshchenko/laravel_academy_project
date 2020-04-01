@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="{{ url('/css/app.css') }}">
     <link rel="stylesheet" href="{{ url('/css/common.css') }}">
     <title>
-    @yield('title_admin', 'TITLE')
+    @yield('title_admin', 'Админка')
 </title>
 </head>
 <body class="sb-nav-fixed">
-    @include('layouts.blocks.admin.nav.index')
+    @include('admin.layouts.blocks.nav.index')
     @yield('content_admin')
-    @include('layouts.blocks.admin.footer.index')
+    @include('admin.layouts.blocks.footer.index')
     <script src="{{ url('/js/app.js') }}"></script>
 </body>
 </html>

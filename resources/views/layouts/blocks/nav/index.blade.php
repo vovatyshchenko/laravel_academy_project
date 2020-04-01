@@ -7,10 +7,10 @@
         <ul class="navbar-nav mr-auto">
             @guest
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ url('/') }}">Главная</a>
+                    <a class="nav-link" href="{{ route('index') }}">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/about') }}">О нас</a>
+                    <a class="nav-link" href="{{ route('about') }}">О нас</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/login') }}">Войти</a>
@@ -23,11 +23,11 @@
                     <a class="nav-link" href="{{ url('/') }}">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/about') }}">О нас</a>
+                    <a class="nav-link" href="{{ route('about') }}">О нас</a>
                 </li>
                 @if(Auth::user()->name == 'Admin')
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/admin') }}">Админ панель</a>
+                        <a class="nav-link" href="{{ route('admin.') }}">Админ панель</a>
                     </li>
                 @endif
                 <li class="nav-item">

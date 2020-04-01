@@ -1,4 +1,4 @@
-@extends('layouts.default_admin')
+@extends('admin.layouts.default')
 @section('title_admin', 'Услуги')
 @section('content_admin')
     <div id="layoutSidenav_content">

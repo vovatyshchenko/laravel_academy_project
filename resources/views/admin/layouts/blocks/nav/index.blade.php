@@ -23,21 +23,21 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Общие настройки</div>
-                            <a class="nav-link" href="{{ url('admin/staff') }}"
+                            <a class="nav-link" href="{{ route('admin.masters.index') }}"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Добавить работника</a
+                                Персолал</a
                             >
-                            <a class="nav-link" href="{{ url('admin/services') }}"
+                            <a class="nav-link" href="{{ route('admin.services.index') }}"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Услуги</a
                             >
                             <div class="sb-sidenav-menu-heading">Клиенты</div>
-                             <a class="nav-link" href="{{ url('admin/') }}"
+                             <a class="nav-link" href="{{ route('admin.orders.index') }}"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Запись</a
                             >
                             <div class="sb-sidenav-menu-heading">График работы</div>
-                            <a class="nav-link" href="{{ url('admin/schedule') }}"
+                            <a class="nav-link" href="{{ route('admin.schedule.index') }}"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 График</a
                             >

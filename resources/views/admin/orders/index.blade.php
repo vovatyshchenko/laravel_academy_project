@@ -1,5 +1,5 @@
-@extends('layouts.default_admin')
-@section('title_admin', 'Админка')
+@extends('admin.layouts.default')
+@section('title_admin', 'Заявки')
 @section('content_admin')
     <div id="layoutSidenav_content">
         <main>

@@ -1,21 +1,23 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin\Orders;
 
-use App\Models\Master;
-use App\Models\Position;
+use App\Http\Controllers\Controller;
+use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
-class PositionController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(): View
     {
-        //
+            $orders = Order::all();
+            return view('admin.orders.index', compact('orders'));
     }
 
     /**
@@ -42,10 +44,10 @@ class PositionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show(Position $position)
+    public function show(Order $order)
     {
         //
     }
@@ -53,10 +55,10 @@ class PositionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function edit(Position $position)
+    public function edit(Order $order)
     {
         //
     }
@@ -65,10 +67,10 @@ class PositionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Position $position)
+    public function update(Request $request, Order $order)
     {
         //
     }
@@ -76,10 +78,10 @@ class PositionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Position $position)
+    public function destroy(Order $order)
     {
         //
     }

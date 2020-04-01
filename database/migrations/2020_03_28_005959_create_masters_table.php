@@ -18,7 +18,7 @@ class CreateMastersTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('patronymic');
-            $table->timestamp('b_day');
+            $table->dateTime('b_day');
             $table->unsignedBigInteger('position_id');
             $table->timestamps();
         });
