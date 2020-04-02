@@ -57,5 +57,12 @@ Route::name('admin.')
 			->group(function () {
 		    	Route::resource('/', 'OrderController');
 			});
+
+        Route::prefix('positions')
+            ->name('positions.')
+            ->namespace('Positions')
+            ->group(function () {
+                Route::resource('/', 'PositionController');
+            });
     });
 

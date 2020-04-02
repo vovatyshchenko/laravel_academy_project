@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-{
+    {
         $positions = Position::all();
         view()->share('positions', $positions);
 

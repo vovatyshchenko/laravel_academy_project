@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin\Positions;
 
 use App\Http\Controllers\Controller;
-use App\Models\Master;
 use App\Models\Position;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -18,7 +17,7 @@ class PositionController extends Controller
     public function index(): View
     {
         $positions = Position::all();
-        return view('admin.masters.blocks.form.index', compact('positions'));
+        return view('admin.positions.index', compact('positions'));
     }
 
     /**
@@ -28,7 +27,7 @@ class PositionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.positions.create');
     }
 
     /**
@@ -39,7 +38,10 @@ class PositionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        Position::create($data);
+
+        return redirect()->route('admin.positions.index');
     }
 
     /**
@@ -50,7 +52,7 @@ class PositionController extends Controller
      */
     public function show(Position $position)
     {
-        //
+       //
     }
 
     /**

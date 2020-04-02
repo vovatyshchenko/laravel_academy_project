@@ -15,16 +15,6 @@ $(document).ready(function($) {
 });
 
 //Use DataTable
-  $(document).ready(function() {
+/*  $(document).ready(function() {
   $('#dataTable').DataTable();
-});
-
-//Use daterangepicker
-$(document).ready(function() {
-      $('input[name="birthday"]').daterangepicker({
-        singleDatePicker: true,
-        showDropdowns: true,
-        minYear: 1901,
-        maxYear: parseInt(moment().format('YYYY'),10)
-      })
-  });
+});*/

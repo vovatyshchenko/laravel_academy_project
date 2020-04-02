@@ -27,7 +27,8 @@ class ScheduleController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.schedule.create');
+
     }
 
     /**
@@ -38,7 +39,10 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        Schedule::create($data);
+
+        return redirect()->route('admin.schedule.index');
     }
 
     /**

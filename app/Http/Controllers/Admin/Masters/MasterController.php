@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Masters;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Masters\StoreRequest;
 use App\Models\Master;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -16,9 +17,8 @@ class MasterController extends Controller
      */
     public function index(): View
     {
-        $masters = Master::all();
-        $position = Master::first()->position;
-        return view('admin.masters.index', compact('masters', 'position'));
+        $masters = Master::with('position')->get();
+        return view('admin.masters.index', compact('masters'));
     }
 
     /**
@@ -34,12 +34,13 @@ class MasterController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param StoreRequest $validated
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-
+        $request->validated();
         $data = $request->all();
         Master::create($data);
 

@@ -2,38 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2691623-bf8c-44c1-b968-7673b82d80cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/testlocal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/testlocal.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MasterController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PositionController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_28_005959_create_masters_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_005959_create_masters_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Masters/MasterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Masters/MasterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Orders/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Orders/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Positions/PositionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Positions/PositionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Schedule/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Schedule/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Services/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Services/ServiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Master.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Master.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Schedule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_27_213603_create_schedules_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_27_213603_create_schedules_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/blocks/admin/footer/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/blocks/admin/nav/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/default_admin.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedule.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/services.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/staff.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/order.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/blocks/nav/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/blocks/nav/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/masters/blocks/form/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/masters/blocks/form/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/masters/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/masters/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/masters/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/masters/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/orders/blocks/form/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/orders/blocks/form/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/orders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/orders/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedule/blocks/form/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedule/blocks/form/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedule/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedule/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/blocks/form/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/blocks/form/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,6 +237,8 @@
       <workItem from="1585592529832" duration="9367000" />
       <workItem from="1585679052518" duration="11560000" />
       <workItem from="1585757219401" duration="8869000" />
+      <workItem from="1585774098839" duration="3956000" />
+      <workItem from="1585852525010" duration="10552000" />
     </task>
     <servers />
   </component>
@@ -254,10 +258,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1585357644169" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585679628935">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585862597759">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1585679628935" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1585862597759" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1584888280318">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

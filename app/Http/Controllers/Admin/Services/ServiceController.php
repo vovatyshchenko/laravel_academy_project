@@ -27,7 +27,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.services.create');
     }
 
     /**
@@ -38,7 +38,10 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        Service::create($data);
+
+        return redirect()->route('admin.services.index');
     }
 
     /**

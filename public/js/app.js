@@ -49505,6 +49505,8 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./common */ "./resources/js/common.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -49571,6 +49573,35 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/common.js":
+/*!********************************!*\
+  !*** ./resources/js/common.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function ($) {
+  "use strict"; // Add class active
+
+  var path = window.location.href;
+  $("#layoutSidenav_nav .sb-sidenav a.nav-link").each(function () {
+    if (this.href === path) {
+      $(this).addClass("active");
+    }
+  }); // Toggle the side navigation
+
+  $("#sidebarToggle").on("click", function (e) {
+    e.preventDefault();
+    $("body").toggleClass("sb-sidenav-toggled");
+  });
+}); //Use DataTable
+
+/*  $(document).ready(function() {
+  $('#dataTable').DataTable();
+});*/
 
 /***/ }),
 

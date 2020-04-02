@@ -9,6 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ url('/css/app.css') }}">
     <link rel="stylesheet" href="{{ url('/css/common.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
     <title>
     @yield('title_admin', 'Админка')
 </title>
