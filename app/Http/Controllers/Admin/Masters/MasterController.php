@@ -64,9 +64,10 @@ class MasterController extends Controller
      * @param  \App\Models\Master  $master
      * @return \Illuminate\Http\Response
      */
-    public function edit(Master $master)
+    public function edit($id)
     {
-        //
+        $master = Master::find($id);
+        return view('admin.masters.edit', compact('master'));
     }
 
     /**
@@ -76,9 +77,13 @@ class MasterController extends Controller
      * @param  \App\Models\Master  $master
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Master $master)
+    public function update(StoreRequest $request, $id)
     {
-        //
+        $request->validated();
+        $master = Master::find($id);
+        $master ->fill($request->all());
+        $master->save();
+        return redirect()->route('admin.masters.index');
     }
 
     /**
@@ -87,8 +92,10 @@ class MasterController extends Controller
      * @param  \App\Models\Master  $master
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Master $master)
+    public function destroy($id)
     {
-        //
+        dd($id);
+        Master::findOrFail($id)->delete();
+        return redirect()->route('admin.masters.index');
     }
 }

@@ -4,7 +4,7 @@
     <div id="layoutSidenav_content">
         <div class="card mb-4">
             <a class="btn btn-primary btn-lg" href="{{ route('admin.positions.create') }}" role="button">Добавить новую специализацию</a>
-            <div class="card-header"><i class="fas fa-table mr-1"></i>Графмк</div>
+            <div class="card-header"><i class="fas fa-table mr-1"></i>Специализации</div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

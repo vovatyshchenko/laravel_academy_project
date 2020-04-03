@@ -27,8 +27,10 @@
                                     <td>{{ $master->b_day }}</td>
                                     <td>{{ $master->position->name }}</td>
                                     <td>
-                                        <a class="btn btn-outline-primary btn-sm" href="#" role="button">Редактировать</a>
-                                        <button type="button" class="btn btn-outline-danger btn-sm">Удалить</button>
+                                        <a class="btn btn-outline-primary btn-sm" href="{{ route('admin.masters.edit', $master->id) }}" role="button">Редактировать</a>
+                                        {!! Form::open(['url' => route('admin.masters.destroy', $master->id)]) !!}
+                                        <button class="btn btn-outline-danger btn-sm mt-1" onclick="return confirm('Вы действительно хотите удалить эту запись?')">Удалить</button>
+                                        {!!Form::close()!!}
                                     </td>
                                 </tr>
                             @endforeach

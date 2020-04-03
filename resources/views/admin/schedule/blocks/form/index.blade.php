@@ -1,8 +1,11 @@
 <div class="row">
     <div class="form-group">
-        @foreach($masterName as $name)
-            {!! Form::radio('name', $name->name, ['class' => 'form-control'])  !!}
-        @endforeach
+        {!! Form::label('name', 'Имя работника') !!}
+        <select name="name" class="form-control">
+            @foreach($masterName as $name)
+                <option value="{{ $name->name}} ">{{ $name->name }} {{ $name->surname }}</option>
+            @endforeach
+        </select>
         @error('name')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
