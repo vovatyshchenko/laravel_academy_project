@@ -18,6 +18,9 @@ Route::view('/', 'index')->name('index');
 
 Route::get('/about', 'ViewsController@about')->name('about');
 
+Route::get('/reservation', 'ReservationController@index')->name('reservation');
+
+
 /**
  * Routes for Admin Panel
  */
@@ -30,39 +33,29 @@ Route::name('admin.')
 
     	Route::view('/', 'admin.index');
 
-		Route::prefix('masters')
-			->name('masters.')
-			->namespace('Masters')
+		Route::namespace('Masters')
 			->group(function () {
-		    	Route::resource('/', 'MasterController');
+		    	Route::resource('masters', 'MasterController');
 			});
 
-		Route::prefix('schedule')
-			->name('schedule.')
-			->namespace('Schedule')
+		Route::namespace('Schedule')
 			->group(function () {
-		    	Route::resource('/', 'ScheduleController');
+		    	Route::resource('schedule', 'ScheduleController');
 			});
 
-		Route::prefix('services')
-			->name('services.')
-			->namespace('Services')
+		Route::namespace('Services')
 			->group(function () {
-		    	Route::resource('/', 'ServiceController');
+		    	Route::resource('services', 'ServiceController');
 			});
 
-		Route::prefix('orders')
-			->name('orders.')
-			->namespace('Orders')
+		Route::namespace('Orders')
 			->group(function () {
-		    	Route::resource('/', 'OrderController');
+		    	Route::resource('orders', 'OrderController');
 			});
 
-        Route::prefix('positions')
-            ->name('positions.')
-            ->namespace('Positions')
+        Route::namespace('Positions')
             ->group(function () {
-                Route::resource('/', 'PositionController');
+                Route::resource('positions', 'PositionController');
             });
     });
 

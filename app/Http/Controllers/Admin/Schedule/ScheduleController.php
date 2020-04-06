@@ -85,8 +85,9 @@ class ScheduleController extends Controller
      * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Schedule $schedule)
+    public function destroy($id)
     {
-        //
+        Schedule::find($id)->delete();
+        return redirect()->route('admin.schedule.index');
     }
 }

@@ -10,7 +10,7 @@
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         {!! Form::label('date', 'Дата') !!}
-        {!! Form::date('date', null, ['class' => 'form-control']) !!}
+        {!! Form::date('date', \Carbon\Carbon::now(), ['class' => 'form-control']) !!}
         @error('date')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror

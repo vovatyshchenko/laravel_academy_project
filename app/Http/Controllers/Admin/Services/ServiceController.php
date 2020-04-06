@@ -61,9 +61,10 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit($id)
     {
-        //
+        $service = Service::find($id);
+        return view('admin.services.edit', compact('service'));
     }
 
     /**
@@ -73,9 +74,13 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $service)
+    public function update(Request $request, $id)
     {
-        //
+        //$request->validated();
+        $service = Service::find($id);
+        $service ->fill($request->all());
+        $service->save();
+        return redirect()->route('admin.services.index');
     }
 
     /**
@@ -84,8 +89,9 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy($id)
     {
-        //
+        Service::find($id)->delete();
+        return redirect()->route('admin.services.index');
     }
 }

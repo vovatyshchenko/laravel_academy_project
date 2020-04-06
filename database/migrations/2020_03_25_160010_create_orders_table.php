@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('tel');
             $table->string('master');
             $table->string('service');
-            $table->timestamp('date');
+            $table->date('date');
             $table->string('time');
             $table->integer('price');
             $table->boolean('status');

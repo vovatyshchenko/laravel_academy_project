@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Position;
 use Illuminate\Database\Seeder;
 
 class PositionsTableSeeder extends Seeder
@@ -11,8 +12,6 @@ class PositionsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('positions')->insert([
-            'name' => Str::random(10),
-        ]);
+        factory(Position::class, 3)->create();
     }
 }

@@ -21,7 +21,9 @@
                                 <td>{{ $schedule->name }}</td>
                                 <td>{{ $schedule->date }}</td>
                                 <td>
-                                    <button type="button" class="btn btn-outline-danger btn-sm">Удалить</button>
+                                    {!! Form::open(['url' => route('admin.schedule.destroy', $schedule), 'method'=>'DELETE']) !!}
+                                    <button type="submit" class="btn btn-outline-danger btn-sm mt-1" onclick="return confirm('Вы действительно хотите удалить эту запись?')"><i class="far fa-trash-alt"></i></button>
+                                    {!!Form::close()!!}
                                 </td>
                             </tr>
                         @endforeach

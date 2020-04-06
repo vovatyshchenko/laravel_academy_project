@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Schedule;
 use Illuminate\Database\Seeder;
 
 class SchedulesTableSeeder extends Seeder
@@ -11,9 +12,6 @@ class SchedulesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('schedules')->insert([
-            'name' => Str::random(10),
-            'date' => '2020-03-28 00:28:33',
-        ]);
+        factory(Schedule::class, 5)->create();
     }
 }

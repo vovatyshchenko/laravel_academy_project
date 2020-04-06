@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Service;
 use Illuminate\Database\Seeder;
 
 class ServicesTableSeeder extends Seeder
@@ -11,9 +12,6 @@ class ServicesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('services')->insert([
-            'name' => Str::random(10),
-            'price' => random_int(150,500),
-        ]);
+        factory(Service::class, 3)->create();
     }
 }

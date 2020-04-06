@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Positions;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Masters\StoreRequest;
 use App\Models\Position;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -38,6 +39,7 @@ class PositionController extends Controller
      */
     public function store(Request $request)
     {
+        //$request->validated();
         $data = $request->all();
         Position::create($data);
 
@@ -61,9 +63,10 @@ class PositionController extends Controller
      * @param  \App\Models\Position  $position
      * @return \Illuminate\Http\Response
      */
-    public function edit(Position $position)
+    public function edit($id)
     {
-        //
+        $position = Position::find($id);
+        return view('admin.positions.edit', compact('position'));
     }
 
     /**
@@ -73,9 +76,13 @@ class PositionController extends Controller
      * @param  \App\Models\Position  $position
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Position $position)
+    public function update(Request $request, $id)
     {
-        //
+       //$request->validated();
+        $position = Position::find($id);
+        $position ->fill($request->all());
+        $position->save();
+        return redirect()->route('admin.positions.index');
     }
 
     /**
@@ -84,8 +91,9 @@ class PositionController extends Controller
      * @param  \App\Models\Position  $position
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Position $position)
+    public function destroy($id)
     {
-        //
+        Position::find($id)->delete();
+        return redirect()->route('admin.positions.index');
     }
 }

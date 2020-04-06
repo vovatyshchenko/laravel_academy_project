@@ -21,9 +21,11 @@
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         {!! Form::label('position_id', 'Сипециализация') !!}
-        @foreach($positions as $position)
-            {!! Form::radio('position_id', $master->position->name) !!}
-        @endforeach
+        <select name="position_id" class="form-control">
+            @foreach($positions as $position)
+                <option value="{{ $position->id }}">{{ $position->name }}</option>
+            @endforeach
+        </select>
         @error('position_id')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror

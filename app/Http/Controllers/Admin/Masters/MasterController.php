@@ -94,8 +94,7 @@ class MasterController extends Controller
      */
     public function destroy($id)
     {
-        dd($id);
-        Master::findOrFail($id)->delete();
+        Master::find($id)->delete();
         return redirect()->route('admin.masters.index');
     }
 }

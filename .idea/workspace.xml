@@ -4,12 +4,44 @@
     <list default="true" id="c2691623-bf8c-44c1-b968-7673b82d80cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Masters/MasterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Masters/MasterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ViewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ViewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/masters/blocks/form/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/masters/blocks/form/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Orders/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Orders/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Positions/PositionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Positions/PositionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Schedule/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Schedule/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Services/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Services/ServiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/MasterFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/MasterFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/OrderFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/OrderFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PositionFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PositionFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ScheduleFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ScheduleFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ServiceFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ServiceFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_25_160010_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_25_160010_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_27_213603_create_schedules_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_27_213603_create_schedules_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_28_005959_create_masters_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_005959_create_masters_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/MastersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MastersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PositionsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PositionsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/SchedulesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SchedulesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ServicesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ServicesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/masters/blocks/form/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/masters/blocks/form/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/masters/blocks/form/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/masters/blocks/form/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/masters/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/masters/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/masters/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/masters/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/masters/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/masters/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/orders/blocks/form/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/orders/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/orders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/orders/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/positions/blocks/form/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/positions/blocks/form/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/positions/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/positions/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/positions/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/positions/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedule/blocks/form/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedule/blocks/form/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedule/blocks/form/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedule/blocks/form/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedule/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedule/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedule/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedule/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/blocks/form/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/blocks/form/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/blocks/nav/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,12 +180,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/positions/blocks/form" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\OSPanel\domains\localhost\resources\views\admin\positions\blocks\form" />
+      <recent name="G:\OSPanel\domains\localhost\resources\views\admin\positions" />
+      <recent name="G:\OSPanel\domains\localhost\resources\views\admin\orders\blocks\form" />
       <recent name="G:\OSPanel\domains\testlocal\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -215,6 +250,9 @@
       <workItem from="1585852525010" duration="10552000" />
       <workItem from="1585934107831" duration="1002000" />
       <workItem from="1585943272327" duration="8201000" />
+      <workItem from="1585991019508" duration="3698000" />
+      <workItem from="1586074865435" duration="4183000" />
+      <workItem from="1586200369631" duration="10684000" />
     </task>
     <servers />
   </component>
@@ -234,10 +272,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1585357644169" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585862597759">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586210846555">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1585862597759" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586210846555" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1584888280318">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -262,10 +300,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="447" y="178" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1585681205192" />
-    <state x="517" y="283" key="NewPhpFileDialog" timestamp="1585934354312">
+    <state x="517" y="283" key="NewPhpFileDialog" timestamp="1586206943153">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1585934354312" />
+    <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1586206943153" />
     <state x="186" y="9" key="SettingsEditor" timestamp="1584825997993">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

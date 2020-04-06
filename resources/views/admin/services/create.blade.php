@@ -6,7 +6,7 @@
             <h1 class="card-header">Добавление новой услуги</h1>
             <div class="card-body m-auto">
                 {!! Form::open(['url' => route('admin.services.store')]) !!}
-                @include('admin.services.blocks.form.index')
+                @include('admin.services.blocks.form.create')
                 <div class="form-group">
                     {!! Form::submit('Добавить', ['class' => 'btn btn-success']); !!}
                 </div>

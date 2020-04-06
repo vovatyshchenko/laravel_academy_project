@@ -1,24 +1,25 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Orders;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Masters\StoreRequest;
-use App\Models\Order;
+use App\Models\Master;
+use App\Models\Service;
+use App\Models\Schedule;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class OrderController extends Controller
+class ReservationController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(): View
+    public function index()
     {
-        $orders = Order::orderBy('id', 'desc')->paginate(5);
-        return view('admin.orders.index', compact('orders'));
+        return view('reservation.index');
     }
 
     /**
@@ -45,10 +46,10 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Order  $order
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function show($id)
     {
         //
     }
@@ -56,40 +57,34 @@ class OrderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Order  $order
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $order = Order::find($id);
-        return view('admin.orders.edit', compact('order'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Order  $order
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //$request->validated();
-        $order = Order::find($id);
-        $order->fill($request->all());
-        $order->save();
-        return redirect()->route('admin.orders.index');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Order  $order
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        Order::find($id)->delete();
-        return redirect()->route('admin.orders.index');
+        //
     }
 }

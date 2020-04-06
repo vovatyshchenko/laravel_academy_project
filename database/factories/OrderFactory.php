@@ -10,7 +10,7 @@ $factory->define(Order::class, function (Faker $faker) {
         'name' => $faker->name,
         'tel' => $faker->phoneNumber,
         'master' => $faker->name,
-        'service' => $faker->randomLetter,
+        'service' => $faker->randomElement(['Стрижка','Стрижка+борода','Королевское бритье']),
         'date' => $faker->date(),
         'time' => $faker->time(),
         'price' => rand(1000, 4000) / 10,
