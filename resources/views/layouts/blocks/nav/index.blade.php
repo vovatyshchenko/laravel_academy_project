@@ -13,6 +13,9 @@
                     <a class="nav-link" href="{{ route('about') }}">О нас</a>
                 </li>
                 <li class="nav-item">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('reservation') }}">Забронировать</a>
+                </li>
                     <a class="nav-link" href="{{ url('/login') }}">Войти</a>
                 </li>
                 <li class="nav-item">
@@ -22,11 +25,11 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ url('/') }}">Главная</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('reservation') }}">Забронировать</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('about') }}">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('reservation') }}">Забронировать</a>
                 </li>
                 @if(Auth::user()->name == 'Admin')
                     <li class="nav-item">

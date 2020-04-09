@@ -1,5 +1,10 @@
 <div class="row">
         <div class="form-group">
+            {!! Form::label('image', 'Фото') !!}
+            {!! Form::file('image', ['class' => 'form-control']) !!}
+            @error('image')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             {!! Form::label('surname', 'Фамилия') !!}
             {!! Form::text('surname', null, ['class' => 'form-control']) !!}
             @error('surname')
@@ -31,5 +36,3 @@
             @enderror
         </div>
 </div>
-
-

@@ -24,6 +24,7 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
+            'image' => 'image|max:2048',
             'surname' => 'required|string',
             'name' => 'required|string|min:2',
             'patronymic' => 'required|string',

@@ -3,10 +3,10 @@
 @section('content')
     <div class="container">
         <div class="row">
-            {!! Form::open(['url' => route('reservation.redirect'), 'method' => 'GET']) !!}
-            @include('reservation.blocks.form.index')
+            {!! Form::open(['url' => route('admin.orders.store')]) !!}
+            @include('reservation.blocks.form.date')
             <div class="form-group">
-                {!! Form::submit('Далее', ['class' => 'btn btn-success']); !!}
+                {!! Form::submit('Забронировать', ['class' => 'btn btn-success']); !!}
             </div>
             {!! Form::close() !!}
         </div>

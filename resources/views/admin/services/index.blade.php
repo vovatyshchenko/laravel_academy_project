@@ -3,6 +3,9 @@
 @section('content_admin')
     <div id="layoutSidenav_content">
         <div class="card mb-4">
+            @if ($message = Session::get('succsess'))
+                <div class="alert alert-success text-center font-weight-bold">{{ $message }}</div>
+            @endif
             <a class="btn btn-primary btn-lg" href="{{ route('admin.services.create') }}" role="button">Добавить новую услугу</a>
             <div class="card-header"><i class="fas fa-table mr-1"></i>Услуги</div>
             <div class="card-body">

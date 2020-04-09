@@ -41,7 +41,7 @@ class ServiceController extends Controller
         $data = $request->all();
         Service::create($data);
 
-        return redirect()->route('admin.services.index');
+        return redirect()->route('admin.services.index')->with('succsess', 'Данные были добавленны успешно');
     }
 
     /**
@@ -80,7 +80,7 @@ class ServiceController extends Controller
         $service = Service::find($id);
         $service ->fill($request->all());
         $service->save();
-        return redirect()->route('admin.services.index');
+        return redirect()->route('admin.services.index')->with('succsess', 'Данные были обновленны успешно');
     }
 
     /**

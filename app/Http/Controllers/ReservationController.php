@@ -7,6 +7,7 @@ use App\Http\Requests\Masters\StoreRequest;
 use App\Models\Master;
 use App\Models\Service;
 use App\Models\Schedule;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -22,14 +23,22 @@ class ReservationController extends Controller
         return view('reservation.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function redirect(Request $request)
     {
-        //
+        $reservationFirstStep = [
+            'name' => $request->name,
+            'tel' => $request->tel,
+            'master' => $request->master,
+        ];
+        $request->session()->put('reservation', [$request->name, $request->tel, $request->master]);
+        return redirect()->route('reservation.date')->with('reservationFirstStep', $reservationFirstStep);
+    }
+
+    public function date(Request $request)
+    {
+        $value = $request->session()->get('reservationFirstStep');
+        $master = Schedule::Where('master_id', $value['master'])->get();
+        return view('reservation.date', compact('master'));
     }
 
     /**
@@ -40,51 +49,7 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $value = $request->session()->get('arr');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

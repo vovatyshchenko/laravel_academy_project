@@ -14,6 +14,5 @@ $factory->define(Order::class, function (Faker $faker) {
         'date' => $faker->date(),
         'time' => $faker->time(),
         'price' => rand(1000, 4000) / 10,
-        'status' => $faker->boolean,
     ];
 });

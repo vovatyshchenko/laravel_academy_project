@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Schedule extends Model
 {
     protected $fillable = [
-        'name', 'date'
+        'master_id', 'date'
     ];
+    public function master()
+    {
+        return $this->belongsTo(Master::class)->withDefault();
+    }
 }

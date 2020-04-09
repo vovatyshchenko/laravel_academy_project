@@ -36,7 +36,7 @@ class Master extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'surname', 'patronymic', 'b_day', 'position_id',
+        'image', 'name', 'surname', 'patronymic', 'b_day', 'position_id',
     ];
 
     public function position()

@@ -1,9 +1,9 @@
 <div class="row">
     <div class="form-group">
-        {!! Form::label('name', 'Имя работника') !!}
-        <select name="name" class="form-control">
+        {!! Form::label('master_id', 'Имя работника') !!}
+        <select name="master_id" class="form-control">
             @foreach($masterName as $name)
-                <option value="{{ $name->name}} ">{{ $name->name }} {{ $name->surname }}</option>
+                <option value="{{ $name->id}} ">{{ $name->name }} {{ $name->surname }}</option>
             @endforeach
         </select>
         @error('name')

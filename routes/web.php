@@ -20,6 +20,9 @@ Route::get('/about', 'ViewsController@about')->name('about');
 
 Route::get('/reservation', 'ReservationController@index')->name('reservation');
 
+Route::get('/reservation/redirect', 'ReservationController@redirect')->name('reservation.redirect');
+
+Route::get('/reservation/date', 'ReservationController@date')->name('reservation.date');
 
 /**
  * Routes for Admin Panel

@@ -5,7 +5,7 @@
         <div class="card mb-4 m-auto">
             <h1 class="card-header">Добавление нового работника</h1>
             <div class="card-body m-auto">
-                {!! Form::open(['url' => route('admin.masters.store')]) !!}
+                {!! Form::open(['url' => route('admin.masters.store'), 'files' => true]) !!}
                 @include('admin.masters.blocks.form.create')
                 <div class="form-group">
                     {!! Form::submit('Добавить', ['class' => 'btn btn-success']); !!}

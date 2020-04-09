@@ -41,10 +41,23 @@ class MasterController extends Controller
     public function store(StoreRequest $request)
     {
         $request->validated();
-        $data = $request->all();
+        $request->validate([
+            'image' => 'required'
+        ]);
+        if ($request->file('image')){
+            $path = $request->file('image')->store('images','public');
+        }
+        $data = [
+            'image' => $path,
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'patronymic' => $request->patronymic,
+            'b_day' => $request->b_day,
+            'position_id' =>$request->position_id,
+        ];
         Master::create($data);
 
-        return redirect()->route('admin.masters.index');
+        return redirect()->route('admin.masters.index')->with('succsess', 'Данные были добавленны успешно');
     }
 
     /**
@@ -79,11 +92,33 @@ class MasterController extends Controller
      */
     public function update(StoreRequest $request, $id)
     {
-        $request->validated();
-        $master = Master::find($id);
-        $master ->fill($request->all());
-        $master->save();
-        return redirect()->route('admin.masters.index');
+        if ($request->file('image')){
+            $path = $request->file('image')->store('images','public');
+            $request->validated();
+            $data = [
+                'image' => $path,
+                'name' => $request->name,
+                'surname' => $request->surname,
+                'patronymic' => $request->patronymic,
+                'b_day' => $request->b_day,
+                'position_id' =>$request->position_id,
+            ];
+            Master::whereId($id)->update($data);
+            return redirect()->route('admin.masters.index')->with('succsess', 'Данные были обновленны успешно');
+        }
+        else{
+            $request->validated();
+            $data = [
+                'image' => $request->hiddenImage,
+                'name' => $request->name,
+                'surname' => $request->surname,
+                'patronymic' => $request->patronymic,
+                'b_day' => $request->b_day,
+                'position_id' =>$request->position_id,
+            ];
+            Master::whereId($id)->update($data);
+            return redirect()->route('admin.masters.index')->with('succsess', 'Данные были обновлены успешно');
+        }
     }
 
     /**

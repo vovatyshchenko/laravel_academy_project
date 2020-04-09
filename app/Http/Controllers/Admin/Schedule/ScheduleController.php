@@ -16,7 +16,7 @@ class ScheduleController extends Controller
      */
     public function index(): View
     {
-        $schedules = Schedule::all();
+        $schedules = Schedule::with('master')->get();
         return view('admin.schedule.index', compact('schedules'));
     }
 
@@ -42,7 +42,7 @@ class ScheduleController extends Controller
         $data = $request->all();
         Schedule::create($data);
 
-        return redirect()->route('admin.schedule.index');
+        return redirect()->route('admin.schedule.index')->with('succsess', 'Данные были добавленны успешно');
     }
 
     /**

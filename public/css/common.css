@@ -76,9 +76,6 @@ p {
     margin-top: 0;
     margin-bottom: 1rem;
 }
-form {
-    display: contents;
-}
 
 abbr[title],
 abbr[data-original-title] {
@@ -1975,6 +1972,9 @@ pre code {
 }
 .table-responsive > .table-bordered {
     border: 0;
+}
+form {
+    display: contents;
 }
 
 .form-control {

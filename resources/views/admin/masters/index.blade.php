@@ -3,6 +3,9 @@
 @section('content_admin')
     <div id="layoutSidenav_content">
         <div class="card mb-4">
+            @if ($message = Session::get('succsess'))
+                <div class="alert alert-success text-center font-weight-bold">{{ $message }}</div>
+            @endif
             <a class="btn btn-primary btn-lg" href="{{ route('admin.masters.create') }}" role="button">Добавить нового работника</a>
             <div class="card-header"><i class="fas fa-table mr-1"></i>Персонал</div>
             <div class="card-body">
@@ -10,6 +13,7 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                         <tr>
+                            <th>Фото</th>
                             <th>Фамилия</th>
                             <th>Имя</th>
                             <th>Отчество</th>
@@ -21,6 +25,7 @@
                         <tbody>
                             @foreach($masters as $master)
                                 <tr>
+                                    <td><img class="img-fluid" width="80" src="{{ URL::to('/') }}/storage/{{ $master->image }}" alt="photo"></td>
                                     <td>{{ $master->surname }}</td>
                                     <td>{{ $master->name }}</td>
                                     <td>{{ $master->patronymic }}</td>

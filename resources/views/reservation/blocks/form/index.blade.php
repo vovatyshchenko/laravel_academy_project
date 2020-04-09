@@ -1,31 +1,21 @@
- <div class="form-group">
-    {!! Form::label('surname', 'Фамилия') !!}
-    {!! Form::text('surname', null, ['class' => 'form-control']) !!}
-    @error('surname')
-    <div class="alert alert-danger">{{ $message }}</div>
-    @enderror
-    {!! Form::label('name', 'Имя') !!}
-    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+<div class="form-group">
+    {!! Form::label('name', 'Ваше имя') !!}
+    {!! Form::text('name', Auth::user()->name, ['class' => 'form-control']) !!}
     @error('name')
     <div class="alert alert-danger">{{ $message }}</div>
     @enderror
-    {!! Form::label('patronymic', 'Отчество') !!}
-    {!! Form::text('patronymic', null, ['class' => 'form-control']) !!}
-    @error('patronymic')
+    {!! Form::label('tel', 'Номер телефона') !!}
+    {!! Form::text('tel', null, ['class' => 'form-control']) !!}
+    @error('tel')
     <div class="alert alert-danger">{{ $message }}</div>
     @enderror
-    {!! Form::label('b_day', 'Дата рождения') !!}
-    {!! Form::date('b_day', null, ['class' => 'form-control']) !!}
-    @error('b_day')
-    <div class="alert alert-danger">{{ $message }}</div>
-    @enderror
-    {!! Form::label('position_id', 'Сипециализация') !!}
-    <select name="position_id" class="form-control">
-        @foreach($positions as $position)
-            <option value="{{ $position->id }}">{{ $position->name }}</option>
-        @endforeach
+    {!! Form::label('master', 'Выберите мастера') !!}
+    <select name="master" class="form-control">
+         @foreach($masterName as $name)
+             <option value="{{ $name->id}}">{{ $name->name }} {{ $name->surname }}</option>
+         @endforeach
     </select>
-    @error('position_id')
+    @error('master')
     <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
+    @enderror
 </div>

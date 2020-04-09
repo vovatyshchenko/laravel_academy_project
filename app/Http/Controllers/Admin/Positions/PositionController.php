@@ -43,7 +43,7 @@ class PositionController extends Controller
         $data = $request->all();
         Position::create($data);
 
-        return redirect()->route('admin.positions.index');
+        return redirect()->route('admin.positions.index')->with('succsess', 'Данные были добавленны успешно');
     }
 
     /**
@@ -82,7 +82,7 @@ class PositionController extends Controller
         $position = Position::find($id);
         $position ->fill($request->all());
         $position->save();
-        return redirect()->route('admin.positions.index');
+        return redirect()->route('admin.positions.index')->with('succsess', 'Данные были обновленны успешно');
     }
 
     /**

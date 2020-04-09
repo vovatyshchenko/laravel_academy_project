@@ -2148,7 +2148,7 @@ pre code {
 }
 
 .form-control {
- /* display: block;*/
+  display: block;
   width: 100%;
   height: calc(1.6em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
@@ -16941,5 +16941,10 @@ readers do not read off random characters that represent icons */
 .fab {
   font-family: "Font Awesome 5 Brands";
   font-weight: 400;
+}
+
+.master__img {
+  width: 150px;
+  border-radius: 80px;
 }
 

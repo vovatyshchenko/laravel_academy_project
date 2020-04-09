@@ -39,7 +39,7 @@
                                     <td>{{ $order->created_at }}</td>
                                     <td>{{ $order->name }}</td>
                                     <td>{{ $order->tel }}</td>
-                                    <td>{{ $order->master }}</td>
+                                    <td>{{ $order->master->name }}</td>
                                     <td>{{ $order->service }}</td>
                                     <td>{{ $order->date }}</td>
                                     <td>{{ $order->time }}</td>
