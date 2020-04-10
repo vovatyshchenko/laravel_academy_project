@@ -40,7 +40,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        $value = $request->session()->get('reservation');
+       /* $value = $request->session()->get('reservation');
         $data = [
             'name' => $value[0],
             'tel' => $value[1],
@@ -50,7 +50,7 @@ class OrderController extends Controller
         ];
         Order::create($data);
         $request->session()->forget('reservation');
-        return redirect()->route('index')->with('succsess', 'Спасибо. Бронирование прошло успешно. Администратор свяжется с Вами в ближайшее время.');
+        return redirect()->route('index')->with('succsess', 'Спасибо. Бронирование прошло успешно. Администратор свяжется с Вами в ближайшее время.');*/
     }
 
     /**

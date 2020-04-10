@@ -15,8 +15,6 @@
                             <th>Мастер</th>
                             <th>Услуга</th>
                             <th>Дата</th>
-                            <th>Время</th>
-                            <th>Стоимость</th>
                             <th>Редактирование</th>
                         </tr>
                         </thead>
@@ -28,8 +26,6 @@
                             <th>Мастер</th>
                             <th>Услуга</th>
                             <th>Дата</th>
-                            <th>Время</th>
-                            <th>Стоимость</th>
                             <th>Редактирование</th>
                         </tr>
                         </tfoot>
@@ -39,11 +35,9 @@
                                     <td>{{ $order->created_at }}</td>
                                     <td>{{ $order->name }}</td>
                                     <td>{{ $order->tel }}</td>
-                                    <td>{{ $order->master->name }}</td>
-                                    <td>{{ $order->service }}</td>
+                                    <td>{{ $order->master->name }} {{ $order->master->surname }}</td>
+                                    <td>{{ $order->service }} грн</td>
                                     <td>{{ $order->date }}</td>
-                                    <td>{{ $order->time }}</td>
-                                    <td>{{ $order->price }}</td>
                                     <td>
                                         <a class="btn btn-outline-primary btn-sm mb-1" href="{{ route('admin.orders.edit', $order) }}" role="button"><i class="fas fa-edit"></i></a>
                                         {!! Form::open(['url' => route('admin.orders.destroy', $order), 'method'=>'DELETE']) !!}

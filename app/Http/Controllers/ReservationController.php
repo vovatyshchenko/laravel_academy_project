@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Masters\StoreRequest;
 use App\Models\Master;
+use App\Models\Order;
 use App\Models\Service;
 use App\Models\Schedule;
 use Illuminate\Contracts\Session\Session;
@@ -31,14 +32,14 @@ class ReservationController extends Controller
             'master' => $request->master,
         ];
         $request->session()->put('reservation', [$request->name, $request->tel, $request->master]);
-        return redirect()->route('reservation.date')->with('reservationFirstStep', $reservationFirstStep);
+        return redirect()->route('reservation.step2')->with('reservationFirstStep', $reservationFirstStep);
     }
 
-    public function date(Request $request)
+    public function step2(Request $request)
     {
         $value = $request->session()->get('reservationFirstStep');
         $master = Schedule::Where('master_id', $value['master'])->get();
-        return view('reservation.date', compact('master'));
+        return view('reservation.step2', compact('master'));
     }
 
     /**
@@ -49,7 +50,17 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        $value = $request->session()->get('arr');
+        $value = $request->session()->get('reservation');
+        $data = [
+            'name' => $value[0],
+            'tel' => $value[1],
+            'master_id' => $value[2],
+            'service' => $request->service,
+            'date' => $request->date,
+        ];
+        Order::create($data);
+        $request->session()->forget('reservation');
+        return redirect()->route('index')->with('succsess', 'Спасибо. Бронирование прошло успешно. Администратор свяжется с Вами в ближайшее время.');
     }
 
 }

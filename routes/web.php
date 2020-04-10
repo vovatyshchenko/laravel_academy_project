@@ -13,21 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Auth::routes();
-
+/**
+ * Routes for Main pages
+ */
 Route::view('/', 'index')->name('index');
-
 Route::get('/about', 'ViewsController@about')->name('about');
-
-Route::get('/reservation', 'ReservationController@index')->name('reservation');
-
-Route::get('/reservation/redirect', 'ReservationController@redirect')->name('reservation.redirect');
-
-Route::get('/reservation/date', 'ReservationController@date')->name('reservation.date');
-
+/**
+ * Routes for Reservation
+ */
+Route::get('/reservation', 'ReservationController@index')->name('reservation')->middleware('auth');
+Route::get('/reservation/redirect', 'ReservationController@redirect')->name('reservation.redirect')->middleware('auth');
+Route::get('/reservation/step2', 'ReservationController@step2')->name('reservation.step2')->middleware('auth');
+Route::post('/reservation/store', 'ReservationController@store')->name('reservation.store')->middleware('auth');
 /**
  * Routes for Admin Panel
  */
-
 Route::name('admin.')
 	->middleware('role:admin@admin.com')
     ->namespace('Admin')
@@ -61,4 +61,3 @@ Route::name('admin.')
                 Route::resource('positions', 'PositionController');
             });
     });
-

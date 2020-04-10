@@ -15,10 +15,10 @@
             @error('tel')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
-            {!! Form::label('master', 'Мастер') !!}
-            <select name="master" class="form-control">
+            {!! Form::label('master_id', 'Мастер') !!}
+            <select name="master_id" class="form-control">
                 @foreach($masterName as $master)
-                    <option value="{{ $master->name }}">{{ $master->name }}</option>
+                    <option value="{{ $master->id }}">{{ $master->name }} {{ $master->surname }}</option>
                 @endforeach
             </select>
             @error('master')
@@ -27,7 +27,7 @@
             {!! Form::label('service', 'Услуга') !!}
             <select name="service" class="form-control">
                 @foreach($services as $service)
-                    <option value="{{ $service->name }}">{{ $service->name }}</option>
+                    <option value="{{ $service->name }} {{ $service->price }}">{{ $service->name }} {{ $service->price }} грн</option>
                 @endforeach
             </select>
             @error('service')
@@ -36,16 +36,6 @@
             {!! Form::label('date', 'Дата') !!}
             {!! Form::date('date', $order->date, ['class' => 'form-control']) !!}
             @error('date')
-            <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
-            {!! Form::label('time', 'Время') !!}
-            {!! Form::text('time', $order->time, ['class' => 'form-control']) !!}
-            @error('time')
-            <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
-            {!! Form::label('price', 'Стоимость') !!}
-            {!! Form::text('price', $order->price, ['class' => 'form-control']) !!}
-            @error('price')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
