@@ -1,10 +1,5 @@
 <div class="row">
         <div class="form-group">
-            {!! Form::label('created_at', 'Дата заявки') !!}
-            {!! Form::text('created_at', $order->created_at, ['class' => 'form-control']) !!}
-            @error('created_at')
-            <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
             {!! Form::label('name', 'Имя') !!}
             {!! Form::text('name', $order->name, ['class' => 'form-control']) !!}
             @error('name')
@@ -21,7 +16,7 @@
                     <option value="{{ $master->id }}">{{ $master->name }} {{ $master->surname }}</option>
                 @endforeach
             </select>
-            @error('master')
+            @error('master_id')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             {!! Form::label('service', 'Услуга') !!}

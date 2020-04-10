@@ -6,7 +6,7 @@
                 <option value="{{ $name->id}} ">{{ $name->name }} {{ $name->surname }}</option>
             @endforeach
         </select>
-        @error('name')
+        @error('master_id')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         {!! Form::label('date', 'Дата') !!}

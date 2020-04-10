@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin\Positions;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Masters\StoreRequest;
+use App\Http\Requests\Positions\StoreRequest;
 use App\Models\Position;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -37,9 +37,9 @@ class PositionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        //$request->validated();
+        $request->validated();
         $data = $request->all();
         Position::create($data);
 
@@ -76,9 +76,9 @@ class PositionController extends Controller
      * @param  \App\Models\Position  $position
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreRequest $request, $id)
     {
-       //$request->validated();
+        $request->validated();
         $position = Position::find($id);
         $position ->fill($request->all());
         $position->save();

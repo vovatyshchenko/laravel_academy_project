@@ -2,22 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2691623-bf8c-44c1-b968-7673b82d80cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/about/Feedback.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Orders/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Orders/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Positions/PositionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Positions/PositionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Schedule/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Schedule/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Services/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Services/ServiceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/blocks/nav/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/blocks/nav/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/OrderFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/OrderFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ServiceFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ServiceFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/blocks/footer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/blocks/footer/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/default.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/orders/blocks/form/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/orders/blocks/form/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/orders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/orders/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reservation/blocks/form/date.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reservation/blocks/form/step2.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reservation/date.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reservation/step2.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/schedule/blocks/form/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/schedule/blocks/form/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/reservation/blocks/form/step2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reservation/blocks/form/step2.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +244,7 @@
       <workItem from="1586448512808" duration="3855000" />
       <workItem from="1586461586665" duration="2106000" />
       <workItem from="1586464825007" duration="10538000" />
-      <workItem from="1586500071910" duration="4741000" />
+      <workItem from="1586500071910" duration="16774000" />
     </task>
     <servers />
   </component>
@@ -296,10 +296,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="447" y="178" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1585681205192" />
-    <state x="517" y="283" key="NewPhpFileDialog" timestamp="1586290475106">
+    <state x="517" y="283" key="NewPhpFileDialog" timestamp="1586514223462">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1586290475106" />
+    <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1586514223462" />
     <state x="186" y="9" key="SettingsEditor" timestamp="1584825997993">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -312,10 +312,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="373" y="213" width="707" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1366.728@0.0.1366.728" timestamp="1584568170900" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1585945058015">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1586520448496">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1585945058015" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586520448496" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584653869057">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

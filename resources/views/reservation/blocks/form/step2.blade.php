@@ -10,9 +10,11 @@
     @enderror
     {!! Form::label('date', 'Выберите дату') !!}
     <select name="date" class="form-control">
-       @foreach($master as $masterDate)
+       @forelse($master as $masterDate)
             <option value="{{ $masterDate->date }}">{{ $masterDate->date }}</option>
-        @endforeach
+        @empty
+            <option value="Нет свободных дат" disabled>Нет свободных дат</option>
+        @endforelse
     </select>
     @error('date')
     <div class="alert alert-danger">{{ $message }}</div>

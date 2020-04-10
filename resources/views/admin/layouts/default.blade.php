@@ -16,7 +16,6 @@
 <body class="sb-nav-fixed">
     @include('admin.layouts.blocks.nav.index')
     @yield('content_admin')
-    @include('admin.layouts.blocks.footer.index')
     <script src="{{ url('/js/app.js') }}"></script>
 </body>
 </html>

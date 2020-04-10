@@ -12,9 +12,47 @@
             <div class="alert alert-success text-center font-weight-bold">{{ $message }}</div>
         @endif
     </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="storage/images/sSrL2ytPvNdp1ri0FNWC6m4nHzgQxslsDM9K3cvW.jpg" alt="Первый слайд">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>БАРБЕРШОП НОСИ УСЫ</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dignissimos doloremque tenetur? Deleniti doloremque ea error fugit ipsa minima, minus obcaecati omnis quae soluta tempore totam unde vel veniam vero.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="storage/images/sSrL2ytPvNdp1ri0FNWC6m4nHzgQxslsDM9K3cvW.jpg" alt="Второй слайд">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>БАРБЕРШОП НОСИ УСЫ</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dignissimos doloremque tenetur? Deleniti doloremque ea error fugit ipsa minima, minus obcaecati omnis quae soluta tempore totam unde vel veniam vero.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="storage/images/sSrL2ytPvNdp1ri0FNWC6m4nHzgQxslsDM9K3cvW.jpg" alt="Третий слайд">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>БАРБЕРШОП НОСИ УСЫ</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dignissimos doloremque tenetur? Deleniti doloremque ea error fugit ipsa minima, minus obcaecati omnis quae soluta tempore totam unde vel veniam vero.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
     <div class="container marketing mt-3">
         <div class="row">
-            <h1 class="mx-auto">НАШИ МАСТЕРА</h1>
+            <h1 class="mx-auto my-5">НАШИ МАСТЕРА</h1>
         </div>
         <div class="row">
             @foreach($masterName as $master)
@@ -26,10 +64,9 @@
                 </div><!-- /.col-lg-4 -->
             @endforeach
         </div><!-- /.row -->
-
         <div class="container marketing mt-3">
             <div class="row">
-                <h1 class="mx-auto">Услуги</h1>
+                <h1 class="mx-auto my-5">Услуги</h1>
             </div>
             <div class="row">
                 @foreach($services as $service)

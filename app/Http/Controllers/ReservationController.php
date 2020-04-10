@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Masters\StoreRequest;
+use App\Http\Requests\Orders\StoreRequest;
+use App\Http\Requests\Orders\Step2Request;
 use App\Models\Master;
 use App\Models\Order;
 use App\Models\Service;
@@ -24,8 +25,9 @@ class ReservationController extends Controller
         return view('reservation.index');
     }
 
-    public function redirect(Request $request)
+    public function redirect(StoreRequest $request)
     {
+        $request->validated();
         $reservationFirstStep = [
             'name' => $request->name,
             'tel' => $request->tel,
@@ -48,8 +50,9 @@ class ReservationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Step2Request $request)
     {
+        $request->validated();
         $value = $request->session()->get('reservation');
         $data = [
             'name' => $value[0],

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use App\Http\Requests\Services\StoreRequest;
 
 class ServiceController extends Controller
 {
@@ -38,6 +39,7 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
+        //$request->validated();
         $data = $request->all();
         Service::create($data);
 

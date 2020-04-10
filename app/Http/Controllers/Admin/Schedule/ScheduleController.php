@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Schedule;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Schedule\StoreRequest;
 use App\Models\Schedule;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -37,8 +38,9 @@ class ScheduleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
+        $request->validated();
         $data = $request->all();
         Schedule::create($data);
 

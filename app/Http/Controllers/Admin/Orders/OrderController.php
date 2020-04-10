@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Admin\Orders;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Masters\StoreRequest;
+use App\Http\Requests\Orders\StoreRequest;
+use App\Http\Requests\Orders\EditRequest;
 use App\Models\Order;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -83,10 +84,11 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EditRequest $request, $id)
     {
-        //$request->validated();
+        $request->validated();
         $order = Order::find($id);
+        //dd($request->master_id);
         $order->fill($request->all());
         $order->save();
         return redirect()->route('admin.orders.index');
