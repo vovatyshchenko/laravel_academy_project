@@ -46,6 +46,9 @@ class MasterController extends Controller
         if ($request->file('image')){
             $path = $request->file('image')->store('images','public');
         }
+        else{
+            $path = 'images/default_masters_image.jpeg';
+        }
         $data = [
             'image' => $path,
             'name' => $request->name,

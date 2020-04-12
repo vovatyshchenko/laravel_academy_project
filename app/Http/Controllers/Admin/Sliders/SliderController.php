@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Sliders;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Sliders\StoreRequest;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -36,11 +37,14 @@ class SliderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        //$request->validated();
+        $request->validated();
         if ($request->file('image')){
             $path = $request->file('image')->store('images','public');
+        }
+        else{
+            $path = 'images/default_slider_image.jpg';
         }
         $data = [
             'image' => $path,
@@ -71,11 +75,11 @@ class SliderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreRequest $request, $id)
     {
         if ($request->file('image')){
             $path = $request->file('image')->store('images','public');
-            //$request->validated();
+            $request->validated();
             $data = [
                 'image' => $path,
                 'title' => $request->title,
@@ -85,7 +89,7 @@ class SliderController extends Controller
             return redirect()->route('admin.sliders.index')->with('succsess', 'Данные были обновленны успешно');
         }
         else {
-            //$request->validated();
+            $request->validated();
             $data = [
                 'image' => $request->hiddenImage,
                 'title' => $request->title,

@@ -18,7 +18,7 @@ class CreateMastersTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('patronymic');
-            $table->string('image')->default('images/xiw3VYEQRfZa2EdGTulCwZKqIen6UUvrzhLf4KBV.png');
+            $table->string('image')->default('images/default_masters_image.png');
             $table->string('description')->nullable();
             $table->date('b_day');
             $table->unsignedBigInteger('position_id');

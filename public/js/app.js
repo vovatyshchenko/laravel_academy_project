@@ -1933,6 +1933,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+Vue.directive('phone', {
+  bind: function bind(el) {
+    el.oninput = function (e) {
+      if (!e.isTrusted) {
+        return;
+      }
+
+      var x = this.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+      this.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+      el.dispatchEvent(new Event('input'));
+    };
+  }
+});
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Feedback",
   data: function data() {
@@ -1940,24 +1965,36 @@ __webpack_require__.r(__webpack_exports__);
       name: null,
       phone: null,
       message: null,
-      error: null
+      errors: []
     };
   },
   methods: {
     send: function send() {
-      axios.post('http://localhost/public/api/feedback', {
-        name: this.name,
-        phone: this.phone,
-        message: this.message
-      }).then(function (response) {
-        console.log(response);
-        alert(response.data.message);
-      })["catch"](function (error) {
-        console.log(error);
-      });
-      this.name = '';
-      this.phone = '';
-      this.message = '';
+      if (this.name && this.phone) {
+        axios.post(document.location.protocol + '//' + document.location.host + '/public/api/feedback', {
+          name: this.name,
+          phone: this.phone,
+          message: this.message
+        }).then(function (response) {
+          console.log(response);
+          alert(response.data.message);
+        })["catch"](function (error) {
+          console.log(error);
+        });
+        this.name = '';
+        this.phone = '';
+        this.message = '';
+      } else {
+        this.errors = [];
+
+        if (!this.name) {
+          this.errors.push('Требуется указать имя');
+        }
+
+        if (!this.phone) {
+          this.errors.push('Требуется указать номер телефона');
+        }
+      }
     }
   }
 });
@@ -37980,6 +38017,17 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
+    _vm.errors
+      ? _c(
+          "ul",
+          { staticClass: "alert-danger font-weight-bold" },
+          _vm._l(_vm.errors, function(error) {
+            return _c("li", [_vm._v(_vm._s(error))])
+          }),
+          0
+        )
+      : _vm._e(),
+    _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c(
         "form",
@@ -38043,13 +38091,18 @@ var render = function() {
                   rawName: "v-model",
                   value: _vm.phone,
                   expression: "phone"
-                }
+                },
+                { name: "phone", rawName: "v-phone" }
               ],
-              staticClass: "form-control mb-2",
+              staticClass: "form-control",
               attrs: {
-                type: "text",
+                type: "tel",
+                name: "phone",
                 id: "phone",
-                placeholder: "Введите номер телефона",
+                placeholder: "(xxx) xxx-xxxx",
+                autocomplete: "tel",
+                maxlength: "14",
+                pattern: "[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}",
                 required: ""
               },
               domProps: { value: _vm.phone },

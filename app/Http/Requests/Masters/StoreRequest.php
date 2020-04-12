@@ -36,6 +36,8 @@ class StoreRequest extends FormRequest
     public function messages()
     {
         return [
+            'image.image' => 'Неверный тип файла, это не изображение',
+            'image.max' => 'Размер изображения не должен превышать 2мб',
             'name.required' => 'Поле имя обязательно для заполнения',
             'name.min'  => 'Поле имя должно содержать более 2-х символов',
             'surname.required'  => 'Поле фамилия обязательно для заполнения',

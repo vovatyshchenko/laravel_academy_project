@@ -44,7 +44,7 @@ class FeedbackController extends Controller
             $arr = [
                 $nameFieldset => $name,
                 $phoneFieldset => $phone,
-                $themeFieldset => $message
+                $themeFieldset ?? 'Тема: ' => $message
             ];
             foreach($arr as $key => $value) {
                 $txt .= "<b>".$key."</b> ".$value."%0A";

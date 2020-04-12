@@ -1,5 +1,8 @@
 <template>
     <div class="container">
+        <ul v-if="errors" class="alert-danger font-weight-bold">
+            <li v-for="error in errors">{{ error }}</li>
+        </ul>
         <div class="row">
             <form class="form" @submit.prevent="send" method="POST" action="http://localhost/pic/api/feedback">
                 <div class="text-center mb-4 mt-4">
@@ -11,7 +14,16 @@
                 </div>
                 <div class="form-label-group">
                     <label for="phone">Номер телефона</label>
-                    <input v-model="phone" type="text" id="phone" class="form-control mb-2" placeholder="Введите номер телефона" required/>
+                    <input type="tel"
+                           v-model="phone"
+                           name="phone"
+                           id="phone"
+                           placeholder="(xxx) xxx-xxxx"
+                           autocomplete="tel"
+                           maxlength="14"
+                           class="form-control"
+                           v-phone
+                           pattern="[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}" required />
                 </div>
                 <div class="form-label-group">
                     <label for="message">Сообщение</label>
@@ -24,6 +36,18 @@
 </template>
 
 <script>
+    Vue.directive('phone', {
+        bind(el) {
+            el.oninput = function(e) {
+                if (!e.isTrusted) {
+                    return;
+                }
+                let x = this.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+                this.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+                el.dispatchEvent(new Event('input'));
+            }
+        }
+    });
     export default {
         name: "Feedback",
         data() {
@@ -31,26 +55,37 @@
                 name: null,
                 phone: null,
                 message: null,
-                error: null,
+                errors: [],
             }
         },
         methods: {
             send() {
-                axios.post('http://localhost/public/api/feedback', {
-                    name: this.name,
-                    phone: this.phone,
-                    message: this.message,
-                })
-                .then(function (response) {
-                    console.log(response);
-                    alert(response.data.message);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-                this.name = '';
-                this.phone = '';
-                this.message = '';
+                if (this.name && this.phone) {
+                    axios.post(document.location.protocol+'//'+document.location.host+'/public/api/feedback', {
+                        name: this.name,
+                        phone: this.phone,
+                        message: this.message,
+                    })
+                        .then(function (response) {
+                            console.log(response);
+                            alert(response.data.message);
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                    this.name = '';
+                    this.phone = '';
+                    this.message = '';
+                }
+                else {
+                    this.errors = [];
+                    if (!this.name) {
+                        this.errors.push('Требуется указать имя');
+                    }
+                    if (!this.phone) {
+                        this.errors.push('Требуется указать номер телефона');
+                    }
+                }
             }
         },
     }

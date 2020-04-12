@@ -1,6 +1,7 @@
 @extends('layouts.default')
 @section('title', 'Домашняя страница')
 @section('content')
+    <!--Slider-->
     <div class="container-fluid" id="app">
         @if ($message = Session::get('succsess'))
             <div class="alert alert-success text-center font-weight-bold">{{ $message }}</div>
@@ -32,31 +33,89 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <div class="container marketing mt-3">
-        <div class="row">
-            <h1 class="mx-auto my-5">НАШИ МАСТЕРА</h1>
-        </div>
-        <div class="row">
-            @foreach($masters as $master)
-                <div class="col-lg-4">
-                    <img class="master__img" src="{{ URL::to('/') }}/storage/{{ $master->image }}" alt="photo">
-                    <h2>{{ $master->surname }} {{ $master->name }}</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste itaque, qui. Asperiores atque deleniti ipsam optio porro provident ratione tempore. Amet aperiam dolor doloribus illo laborum quis sapiente tempora tempore.</p>
-                    {{--<p><a class="btn btn-secondary" href="#" role="button">Посмотреть детали &raquo;</a></p>--}}
-                </div><!-- /.col-lg-4 -->
-            @endforeach
-        </div><!-- /.row -->
-        <div class="container marketing mt-3">
-            <div class="row">
-                <h1 class="mx-auto my-5">Услуги</h1>
+    <!-- Masters -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <h3 class="section__suptitle" data-aos="slide-left" data-aos>Our team</h3>
+                <h2 class="section__title" data-aos="slide-right" data-aos>наша команда</h2>
+                <div class="section__text" data-aos="zoom-in" data-aos>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
             </div>
-            <div class="row">
-                @foreach($services as $service)
-                    <div class="col-lg-4">
-                        <h2>{{ $service->name }}</h2>
-                    <h4>{{ $service->price }} грн</h4>
-                    </div><!-- /.col-lg-4 -->
+            <div class="cards">
+                @foreach($masters as $master)
+                    <div class="cards__item">
+                        <div class="cards__inner">
+                            <div class="cards__img">
+                                <img src="{{ URL::to('/') }}/storage/{{ $master->image }}" alt="photo">
+                            </div>
+                            <div class="cards__text">
+                                <div class="social">
+                                    <a class="social__item" href="#" target="_blank">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a class="social__item" href="#" target="_blank">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a class="social__item" href="#" target="_blank">
+                                        <i class="fab fa-pinterest-p"></i>
+                                    </a>
+                                    <a class="social__item" href="#" target="_blank">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cards__info">
+                            <div class="cards__name">{{ $master->name }}</div>
+                            <div class="cards__prof">{{ $master->position->name }}</div>
+                        </div>
+                    </div><!-- /.cards__item -->
                 @endforeach
-            </div><!-- /.row -->
+            </div><!-- /.cards -->
+        </div><!-- /.container -->
+    </section>
+    <!-- Logos -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="logos">
+                <div class="logos__item">
+                    <img class="logos__img" src="{{ URL::to('/') }}/storage/images/logos/1.png" alt="logo">
+                </div>
+                <div class="logos__item">
+                    <img class="logos__img" src="{{ URL::to('/') }}/storage/images/logos/2.png" alt="logo">
+                </div>
+                <div class="logos__item">
+                    <img class="logos__img" src="{{ URL::to('/') }}/storage/images/logos/3.png" alt="logo">
+                </div>
+                <div class="logos__item">
+                    <img class="logos__img" src="{{ URL::to('/') }}/storage/images/logos/4.png" alt="logo">
+                </div>
+                <div class="logos__item">
+                    <img class="logos__img" src="{{ URL::to('/') }}/storage/images/logos/5.png" alt="logo">
+                </div>
+                <div class="logos__item">
+                    <img class="logos__img" src="{{ URL::to('/') }}/storage/images/logos/6.png" alt="logo">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section__header">
+                <h3 class="section__suptitle" data-aos="slide-left" data-aos>Services</h3>
+                <h2 class="section__title" data-aos="slide-right" data-aos>Услуги</h2>
+            </div>
+            <div class="services">
+                @foreach($services as $service)
+                    <div class="services__item  services__item--border">
+                        <div class="services__title">{{ $service->name }} {{ $service->price }} грн</div>
+                        <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+                    </div>
+                @endforeach
+            </div>
+        </div><!-- /.container -->
+    </section>
 @endsection
-

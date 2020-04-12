@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" id="nav">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -44,5 +44,8 @@
                 </li>
             @endguest
         </ul>
+        <div class="navbar-nav nav-item">
+            <a class="nav-link ml-auto" href="tel:+380501234567">+380501234567</a>
+        </div>
     </div>
 </nav>
