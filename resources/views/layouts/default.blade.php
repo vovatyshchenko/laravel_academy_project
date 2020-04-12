@@ -8,6 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ url('/css/app.css') }}">
+    <link rel="stylesheet" href="{{ url('/css/main.css') }}">
     <title>
     @yield('title', 'TITLE')
 </title>
@@ -16,6 +17,7 @@
     @include('layouts.blocks.nav.index')
     @yield('content')
     @include('layouts.blocks.footer.index')
+    <script src="{{ url('/js/main.js') }}"></script>
     <script src="{{ url('/js/app.js') }}"></script>
 </body>
 </html>

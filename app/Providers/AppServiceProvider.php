@@ -27,13 +27,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $positions = Position::all();
-        view()->share('positions', $positions);
-
-        $services = Service::all();
-        view()->share('services', $services);
-
-        $masterName = Master::all();
-        view()->share('masterName', $masterName);
+        //
     }
 }

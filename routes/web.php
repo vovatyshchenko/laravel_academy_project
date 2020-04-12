@@ -16,7 +16,7 @@ Auth::routes();
 /**
  * Routes for Main pages
  */
-Route::view('/', 'index')->name('index');
+Route::get('/', 'ViewsController@index')->name('index');
 Route::get('/about', 'ViewsController@about')->name('about');
 /**
  * Routes for Reservation
@@ -59,5 +59,10 @@ Route::name('admin.')
         Route::namespace('Positions')
             ->group(function () {
                 Route::resource('positions', 'PositionController');
+            });
+
+        Route::namespace('Sliders')
+            ->group(function () {
+                Route::resource('sliders', 'SliderController');
             });
     });

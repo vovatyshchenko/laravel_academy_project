@@ -16,5 +16,5 @@ $(document).ready(function($) {
 
 //Use DataTable
 /*  $(document).ready(function() {
-  $('#dataTable').DataTable();
+  $('.table').DataTable();
 });*/

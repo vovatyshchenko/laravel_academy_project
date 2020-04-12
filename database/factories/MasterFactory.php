@@ -7,9 +7,10 @@ use Faker\Generator as Faker;
 
 $factory->define(Master::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
+        'name' => $faker->firstName,
         'surname' => $faker->lastName,
-        'patronymic' => $faker->firstName,
+        'patronymic' => $faker->name,
+        'description' => $faker->randomLetter,
         'b_day' => $faker->date(),
         'position_id' => $faker->randomElement(['1', '2', '3']),
     ];

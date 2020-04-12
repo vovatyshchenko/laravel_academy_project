@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Masters;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Masters\StoreRequest;
 use App\Models\Master;
+use App\Models\Position;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -28,7 +29,8 @@ class MasterController extends Controller
      */
     public function create()
     {
-        return view('admin.masters.create');
+        $positions = Position::all();
+        return view('admin.masters.create', compact('positions'));
     }
 
     /**
@@ -41,9 +43,6 @@ class MasterController extends Controller
     public function store(StoreRequest $request)
     {
         $request->validated();
-        $request->validate([
-            'image' => 'required'
-        ]);
         if ($request->file('image')){
             $path = $request->file('image')->store('images','public');
         }
@@ -61,33 +60,23 @@ class MasterController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Master  $master
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Master $master)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Master  $master
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
+        $positions = Position::all();
         $master = Master::find($id);
-        return view('admin.masters.edit', compact('master'));
+        return view('admin.masters.edit', compact('master', 'positions'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Master  $master
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(StoreRequest $request, $id)
@@ -124,7 +113,7 @@ class MasterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Master  $master
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

@@ -22,7 +22,8 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        return view('reservation.index');
+        $masters = Master::with('position')->get();
+        return view('reservation.index', compact('masters'));
     }
 
     public function redirect(StoreRequest $request)
@@ -39,9 +40,10 @@ class ReservationController extends Controller
 
     public function step2(Request $request)
     {
+        $services = Service::all();
         $value = $request->session()->get('reservationFirstStep');
         $master = Schedule::Where('master_id', $value['master'])->get();
-        return view('reservation.step2', compact('master'));
+        return view('reservation.step2', compact('master', 'services'));
     }
 
     /**

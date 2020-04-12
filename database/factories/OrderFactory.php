@@ -9,10 +9,8 @@ $factory->define(Order::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'tel' => $faker->phoneNumber,
-        'master' => $faker->name,
+        'master_id' => $faker->randomElement(['1','2','3','4','5']),
         'service' => $faker->randomElement(['Услуга 1','Услуга 2','Услуга 3']),
         'date' => $faker->date(),
-        'time' => $faker->time(),
-        'price' => rand(1000, 4000) / 10,
     ];
 });

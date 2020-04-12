@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Schedule;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Schedule\StoreRequest;
+use App\Models\Master;
 use App\Models\Schedule;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -28,7 +29,8 @@ class ScheduleController extends Controller
      */
     public function create()
     {
-        return view('admin.schedule.create');
+        $masters = Master::with('position')->get();
+        return view('admin.schedule.create', compact('masters'));
 
     }
 
@@ -54,29 +56,6 @@ class ScheduleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Schedule $schedule)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Schedule  $schedule
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Schedule $schedule)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Schedule  $schedule
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Schedule $schedule)
     {
         //
     }

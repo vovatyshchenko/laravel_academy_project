@@ -15,18 +15,17 @@ class CreateSchedulesTable extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
-            //$table->string('name');
             $table->unsignedBigInteger('master_id');
             $table->date('date');
             $table->timestamps();
         });
 
-       /* Schema::table('schedules', function (Blueprint $table) {
+        Schema::table('schedules', function (Blueprint $table) {
             $table->foreign('master_id')
                 ->references('id')
                 ->on('masters')
                 ->onDelete('cascade');
-        });*/
+        });
     }
 
     /**

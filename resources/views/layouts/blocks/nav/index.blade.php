@@ -2,7 +2,6 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             @guest
@@ -10,7 +9,7 @@
                     <a class="nav-link" href="{{ route('index') }}">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}">О нас</a>
+                    <a class="nav-link" href="{{ route('about') }}">Обратная связь</a>
                 </li>
                 <li class="nav-item">
                 <li class="nav-item">
@@ -26,7 +25,7 @@
                     <a class="nav-link" href="{{ url('/') }}">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}">О нас</a>
+                    <a class="nav-link" href="{{ route('about') }}">Обратная связь</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('reservation') }}">Забронировать</a>

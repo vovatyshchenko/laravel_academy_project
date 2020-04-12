@@ -14,7 +14,14 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
 
+mix.scripts([
+    'resources/js/fix_bootstrap_carousel.js',
+], 'public/js/main.js');
+
 mix.styles([
     'resources/sass/common.scss',
 ], 'public/css/common.css');
 
+mix.styles([
+    'resources/sass/index.scss'
+], 'public/css/main.css');

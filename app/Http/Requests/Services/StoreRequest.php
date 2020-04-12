@@ -35,7 +35,7 @@ class StoreRequest extends FormRequest
             'name.required' => 'Поле обязательно для заполнения',
             'name.min'  => 'Поле должно содержать более 2-х символов',
             'price.required'  => 'Поле обязательно для заполнения',
-            'price.integer'  => 'Поле должно содержать только цифры,
+            'price.numeric'  => 'Поле должно содержать только цифры',
         ];
     }
 }

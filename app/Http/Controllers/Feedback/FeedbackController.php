@@ -13,7 +13,8 @@ class FeedbackController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+
+    public function sendMessage(Request $request)
     {
         $name = $request->name;
         $phone = $request->phone;
@@ -22,19 +23,19 @@ class FeedbackController extends Controller
         if (!empty($name) && !empty($phone)){
             if (isset($name)) {
                 if (!empty($name)){
-                    $name = strip_tags($name);
+                    $name = trim(strip_tags(htmlspecialchars($name)));
                     $nameFieldset = "Имя пославшего: ";
                 }
             }
             if (isset($phone)) {
                 if (!empty($phone)){
-                    $phone = strip_tags($phone);
+                    $phone = trim(strip_tags(htmlspecialchars($phone)));
                     $phoneFieldset = "Телефон: ";
                 }
             }
             if (isset($message)) {
                 if (!empty($message)){
-                    $message = strip_tags($message);
+                    $message = trim(strip_tags(htmlspecialchars($message)));
                     $themeFieldset = "Тема: ";
                 }
             }

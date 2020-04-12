@@ -11,7 +11,7 @@
     @enderror
     {!! Form::label('master', 'Выберите мастера') !!}
     <select name="master" class="form-control">
-         @foreach($masterName as $name)
+         @foreach($masters as $name)
              <option value="{{ $name->id}}">{{ $name->name }} {{ $name->surname }}</option>
          @endforeach
     </select>

@@ -2,7 +2,7 @@
     <div class="form-group">
         {!! Form::label('master_id', 'Имя работника') !!}
         <select name="master_id" class="form-control">
-            @foreach($masterName as $name)
+            @foreach($masters as $name)
                 <option value="{{ $name->id}} ">{{ $name->name }} {{ $name->surname }}</option>
             @endforeach
         </select>

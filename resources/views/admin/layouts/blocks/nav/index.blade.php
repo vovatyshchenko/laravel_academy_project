@@ -25,28 +25,26 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Общие настройки</div>
-                            <a class="nav-link" href="{{ route('admin.masters.index') }}"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                                Персонал</a
-                            >
-                            <a class="nav-link" href="{{ route('admin.services.index') }}"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-concierge-bell"></i></div>
-                                Услуги</a
-                            >
-                            <a class="nav-link" href="{{ route('admin.positions.index') }}"
-                            ><div class="sb-nav-link-icon"><i class="fas fa-user-tag"></i></div>
-                                Специализация</a
-                            >
+                            <a class="nav-link" href="{{ route('admin.masters.index') }}">
+                                <span class="sb-nav-link-icon"><i class="fas fa-users"></i></span>Персонал
+                            </a>
+                            <a class="nav-link" href="{{ route('admin.services.index') }}">
+                                <span class="sb-nav-link-icon"><i class="fas fa-concierge-bell"></i></span>Услуги
+                            </a>
+                            <a class="nav-link" href="{{ route('admin.positions.index') }}">
+                                <span class="sb-nav-link-icon"><i class="fas fa-user-tag"></i></span>Специализация
+                            </a>
+                            <a class="nav-link" href="{{ route('admin.sliders.index') }}">
+                                <span class="sb-nav-link-icon"><i class="fas fa-user-tag"></i></span>Сладер
+                            </a>
                             <div class="sb-sidenav-menu-heading">График работы</div>
-                            <a class="nav-link" href="{{ route('admin.schedule.index') }}"
-                            ><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                График</a
-                            >
+                            <a class="nav-link" href="{{ route('admin.schedule.index') }}">
+                                <span class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></span>График
+                            </a>
                             <div class="sb-sidenav-menu-heading">Клиенты</div>
-                             <a class="nav-link" href="{{ route('admin.orders.index') }}"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Запись</a
-                            >
+                             <a class="nav-link" href="{{ route('admin.orders.index') }}">
+                                 <span class="sb-nav-link-icon"><i class="fas fa-table"></i></span>Запись
+                             </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

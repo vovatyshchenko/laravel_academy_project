@@ -20,17 +20,15 @@ class CreateOrdersTable extends Migration
             $table->unsignedBigInteger('master_id');
             $table->string('service');
             $table->date('date');
-            $table->string('time')->nullable();
-            $table->integer('price')->nullable();
             $table->timestamps();
         });
 
-        /* Schema::table('orders', function (Blueprint $table) {
+        Schema::table('orders', function (Blueprint $table) {
            $table->foreign('master_id')
                ->references('id')
                ->on('masters')
                ->onDelete('cascade');
-       });*/
+       });
     }
 
     /**

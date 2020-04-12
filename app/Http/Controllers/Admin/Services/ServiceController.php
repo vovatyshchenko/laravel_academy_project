@@ -37,24 +37,13 @@ class ServiceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        //$request->validated();
+        $request->validated();
         $data = $request->all();
         Service::create($data);
 
         return redirect()->route('admin.services.index')->with('succsess', 'Данные были добавленны успешно');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Service $service)
-    {
-        //
     }
 
     /**
@@ -76,9 +65,9 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreRequest $request, $id)
     {
-        //$request->validated();
+        $request->validated();
         $service = Service::find($id);
         $service ->fill($request->all());
         $service->save();
