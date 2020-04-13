@@ -122,6 +122,6 @@ class MasterController extends Controller
     public function destroy($id)
     {
         Master::find($id)->delete();
-        return redirect()->route('admin.masters.index');
+        return redirect()->route('admin.masters.index')->with('succsess', 'Данные были удалены успешно');
     }
 }

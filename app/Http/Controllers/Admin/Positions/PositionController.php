@@ -82,7 +82,7 @@ class PositionController extends Controller
         $position = Position::find($id);
         $position ->fill($request->all());
         $position->save();
-        return redirect()->route('admin.positions.index')->with('succsess', 'Данные были обновленны успешно');
+        return redirect()->route('admin.positions.index')->with('succsess', 'Данные были обновлены успешно');
     }
 
     /**
@@ -94,6 +94,6 @@ class PositionController extends Controller
     public function destroy($id)
     {
         Position::find($id)->delete();
-        return redirect()->route('admin.positions.index');
+        return redirect()->route('admin.positions.index')->with('succsess', 'Данные были удалены успешно');
     }
 }

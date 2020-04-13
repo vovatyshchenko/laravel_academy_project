@@ -109,6 +109,6 @@ class SliderController extends Controller
     public function destroy($id)
     {
         Slider::find($id)->delete();
-        return redirect()->route('admin.sliders.index');
+        return redirect()->route('admin.sliders.index')->with('succsess', 'Данные были удалены успешно');
     }
 }

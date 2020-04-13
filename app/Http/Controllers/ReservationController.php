@@ -15,6 +15,16 @@ use Illuminate\View\View;
 
 class ReservationController extends Controller
 {
+    public static function sendToTelega()
+    {
+        $txt = '';
+        $mes = 'Поступило новое бронирование';
+        $link = '<a href="laravelproject.s-host.net/admin/orders">ПОСМОТРЕТЬ</a>';
+        $token = "1026444594:AAGkI6Tfvqw_VMydLWXmnK3_U4MG8Gpih-g";
+        $chat_id = "-295683968";
+        $txt .= "<b>".$mes."</b> ".$link."%0A";
+        fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
+    }
     /**
      * Display a listing of the resource.
      *
@@ -65,6 +75,7 @@ class ReservationController extends Controller
         ];
         Order::create($data);
         $request->session()->forget('reservation');
+        ReservationController::sendToTelega();
         return redirect()->route('index')->with('succsess', 'Спасибо. Бронирование прошло успешно. Администратор свяжется с Вами в ближайшее время.');
     }
 

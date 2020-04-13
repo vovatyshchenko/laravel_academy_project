@@ -24,7 +24,7 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|min:2',
+            'name' => 'required|max:100|min:2',
         ];
     }
 
@@ -32,6 +32,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'name.required' => 'Поле обязательно для заполнения',
+            'name.max' => 'Поле не может содержать более 100 символов',
             'name.min'  => 'Поле должно содержать более 2-х символов',
         ];
     }

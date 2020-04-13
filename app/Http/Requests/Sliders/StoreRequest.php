@@ -25,8 +25,8 @@ class StoreRequest extends FormRequest
     {
         return [
             'image' => 'image|max:2048',
-            'title' => 'required',
-            'text' => 'required',
+            'title' => 'required|max:150',
+            'text' => 'required|max:255',
         ];
     }
 
@@ -36,7 +36,9 @@ class StoreRequest extends FormRequest
             'image.image' => 'Неверный тип файла, это не изображение',
             'image.max' => 'Размер изображения не должен превышать 2мб',
             'title.required' => 'Поле обязательно для заполнения',
+            'title.max' => 'Поле не может содержать более 150 символов',
             'text.required'  => 'Поле обязательно для заполнения',
+            'text.max'  => 'Поле не может содержать более 255 символов',
         ];
     }
 }

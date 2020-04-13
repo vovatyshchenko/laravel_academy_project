@@ -24,14 +24,11 @@ class EditRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|min:2',
-            'tel' => 'required|numeric',
+            'name' => 'required|max:100|min:2',
+            'tel' => 'required|numeric|max:100',
             'master_id' => 'integer',
             'service' => 'required',
             'date' => 'required|date',
-            'time' => '',
-            'price' =>'',
-
         ];
     }
 
@@ -39,9 +36,11 @@ class EditRequest extends FormRequest
     {
         return [
             'name.required' => 'Поле обязательно для заполнения',
+            'name.max' => 'Поле не может содержать более 100 символов',
             'name.min'  => 'Поле должно содержать более 2-х символов',
             'tel.required' => 'Поле обязательно для заполнения',
             'tel.numeric' => 'Поле дата содержит не корректное зачение',
+            'tel.max' => 'Поле не может содержать более 100 символов',
             'master_id.integer' => 'Выберите мастера',
             'service.required' => 'Услуга не выбрана',
             'date.required' => 'Поле обязательно для заполнения',

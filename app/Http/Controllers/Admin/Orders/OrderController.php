@@ -52,7 +52,7 @@ class OrderController extends Controller
         //dd($request->master_id);
         $order->fill($request->all());
         $order->save();
-        return redirect()->route('admin.orders.index');
+        return redirect()->route('admin.orders.index')->with('succsess', 'Данные были обновлены успешно');;
     }
 
     /**
@@ -64,6 +64,6 @@ class OrderController extends Controller
     public function destroy($id)
     {
         Order::find($id)->delete();
-        return redirect()->route('admin.orders.index');
+        return redirect()->route('admin.orders.index')->with('succsess', 'Данные были удалены успешно');
     }
 }

@@ -71,7 +71,7 @@ class ServiceController extends Controller
         $service = Service::find($id);
         $service ->fill($request->all());
         $service->save();
-        return redirect()->route('admin.services.index')->with('succsess', 'Данные были обновленны успешно');
+        return redirect()->route('admin.services.index')->with('succsess', 'Данные были обновлены успешно');
     }
 
     /**
@@ -83,6 +83,6 @@ class ServiceController extends Controller
     public function destroy($id)
     {
         Service::find($id)->delete();
-        return redirect()->route('admin.services.index');
+        return redirect()->route('admin.services.index')->with('succsess', 'Данные были удалены успешно');
     }
 }

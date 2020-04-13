@@ -2,9 +2,9 @@
 @section('title', 'Барбершоп')
 @section('content')
     <!--Slider-->
-    <div class="container-fluid" id="app">
+    <div class="container-fluid px-0" id="app">
         @if ($message = Session::get('succsess'))
-            <div class="alert alert-success text-center font-weight-bold">{{ $message }}</div>
+            <div class="alert alert-success text-center font-weight-bold mb-0">{{ $message }}</div>
         @endif
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
