@@ -20,6 +20,7 @@
     @include('layouts.blocks.nav.index')
     @yield('content')
     @include('layouts.blocks.footer.index')
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="{{ url('/js/main.js') }}"></script>
     <script src="{{ url('/js/app.js') }}"></script>
 </body>

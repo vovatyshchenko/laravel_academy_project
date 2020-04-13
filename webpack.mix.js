@@ -16,6 +16,7 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.scripts([
     'resources/js/fix_bootstrap_carousel.js',
+    'resources/js/header_collapse.js',
 ], 'public/js/main.js');
 
 mix.styles([
