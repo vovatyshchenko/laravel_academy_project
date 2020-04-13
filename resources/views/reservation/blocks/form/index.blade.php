@@ -1,4 +1,4 @@
-<div class="form-group">
+<div class="form-group col-12">
     {!! Form::label('name', 'Ваше имя') !!}
     {!! Form::text('name', Auth::user()->name, ['class' => 'form-control']) !!}
     @error('name')

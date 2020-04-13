@@ -1,4 +1,4 @@
-<div class="form-group">
+<div class="form-group col-12">
     {!! Form::label('service', 'Выберите услугу') !!}
     <select name="service" class="form-control">
         @foreach($services as $service)

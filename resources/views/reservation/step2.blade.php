@@ -5,7 +5,7 @@
         <div class="row">
             {!! Form::open(['url' => route('reservation.store')]) !!}
             @include('reservation.blocks.form.step2')
-            <div class="form-group">
+            <div class="form-group col-12">
                 {!! Form::submit('Забронировать', ['class' => 'btn btn-success']); !!}
             </div>
             {!! Form::close() !!}

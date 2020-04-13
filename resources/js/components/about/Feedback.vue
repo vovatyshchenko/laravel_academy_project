@@ -4,7 +4,7 @@
             <li v-for="error in errors">{{ error }}</li>
         </ul>
         <div class="row">
-            <form class="form" @submit.prevent="send" method="POST" action="http://localhost/pic/api/feedback">
+            <form class="form col-12" @submit.prevent="send" method="POST" action="http://localhost/pic/api/feedback">
                 <div class="text-center mb-4 mt-4">
                     <h1 class="h3 mb-3 font-weight-normal">ОБРАТНАЯ СВЯЗЬ</h1>
                 </div>

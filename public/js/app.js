@@ -38032,7 +38032,7 @@ var render = function() {
       _c(
         "form",
         {
-          staticClass: "form",
+          staticClass: "form col-12",
           attrs: {
             method: "POST",
             action: "http://localhost/pic/api/feedback"

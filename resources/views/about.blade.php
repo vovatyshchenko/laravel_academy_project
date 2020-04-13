@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title', 'О нас')
+@section('title', 'Обратная связь')
 @section('content')
     <div id="app">
         <feedback></feedback>

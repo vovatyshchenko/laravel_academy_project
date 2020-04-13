@@ -5,7 +5,7 @@
         <div class="row">
             {!! Form::open(['url' => route('reservation.redirect'), 'method' => 'GET']) !!}
             @include('reservation.blocks.form.index')
-            <div class="form-group">
+            <div class="form-group col-12">
                 {!! Form::submit('Далее', ['class' => 'btn btn-success']); !!}
             </div>
             {!! Form::close() !!}

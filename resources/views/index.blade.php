@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title', 'Домашняя страница')
+@section('title', 'Барбершоп')
 @section('content')
     <!--Slider-->
     <div class="container-fluid" id="app">
