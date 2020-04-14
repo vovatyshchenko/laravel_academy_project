@@ -10,7 +10,12 @@
                 </div>
                 <div class="form-label-group">
                     <label for="name">Имя</label>
-                    <input v-model="name" type="text" id="name" class="form-control mb-2" placeholder="Введите имя" required autofocus/>
+                    <input v-model="name"
+                           type="text"
+                           id="name"
+                           class="form-control mb-2"
+                           :maxlength="30"
+                           placeholder="Введите имя" required autofocus/>
                 </div>
                 <div class="form-label-group">
                     <label for="phone">Номер телефона</label>
@@ -27,7 +32,12 @@
                 </div>
                 <div class="form-label-group">
                     <label for="message">Сообщение</label>
-                    <textarea v-model="message" name="message" id="message" class="form-control mb-2" placeholder="Введите сообщение"></textarea>
+                    <textarea v-model="message"
+                              :maxlength="100"
+                              name="message"
+                              id="message"
+                              class="form-control mb-2"
+                              placeholder="Введите сообщение"></textarea>
                 </div>
                 <button class="btn btn-primary mt-3 mb-3" type="submit">ОТПРАВИТЬ</button>
             </form>
@@ -73,9 +83,9 @@
                         .catch(function (error) {
                             console.log(error);
                         });
-                    this.name = '';
+                    this.name = ' ';
                     this.phone = '';
-                    this.message = '';
+                    this.message = ' ';
                 }
                 else {
                     this.errors = [];

@@ -1945,6 +1945,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 Vue.directive('phone', {
   bind: function bind(el) {
     el.oninput = function (e) {
@@ -1981,9 +1991,9 @@ Vue.directive('phone', {
         })["catch"](function (error) {
           console.log(error);
         });
-        this.name = '';
+        this.name = ' ';
         this.phone = '';
-        this.message = '';
+        this.message = ' ';
       } else {
         this.errors = [];
 
@@ -38063,6 +38073,7 @@ var render = function() {
               attrs: {
                 type: "text",
                 id: "name",
+                maxlength: 30,
                 placeholder: "Введите имя",
                 required: "",
                 autofocus: ""
@@ -38131,6 +38142,7 @@ var render = function() {
               ],
               staticClass: "form-control mb-2",
               attrs: {
+                maxlength: 100,
                 name: "message",
                 id: "message",
                 placeholder: "Введите сообщение"

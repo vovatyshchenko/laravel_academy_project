@@ -5,6 +5,10 @@ body {
     line-height: 1.6;
     color: #333;
 }
+/* Page */
+.page {
+    overflow: hidden;
+}
 /*nav*/
 nav.fix {
     position: fixed;
@@ -60,7 +64,7 @@ nav.fix {
 /* cards */
 .cards {
     margin: 80px -15px 0;
-    display: flex !important; 
+    display: flex !important;
     flex-wrap: wrap !important;
     justify-content: space-between !important;
 }

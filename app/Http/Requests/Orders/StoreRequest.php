@@ -25,7 +25,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'name' => 'required|max:100|min:2',
-            'tel' => 'required|numeric|max:100',
+            'tel' => 'required|numeric',
             'master' => 'required',
         ];
     }
@@ -35,10 +35,10 @@ class StoreRequest extends FormRequest
         return [
             'name.required' => 'Поле обязательно для заполнения',
             'name.max' => 'Поле не может содержать более 100 символов',
+            'name.string' => 'ололо',
             'name.min'  => 'Поле должно содержать более 2-х символов',
             'tel.required' => 'Поле обязательно для заполнения',
             'tel.numeric' => 'Некорректное значение',
-            'tel.max' => 'Поле не может содержать более 100 символов',
             'master.required' => 'Выберите мастера',
         ];
     }

@@ -5,7 +5,7 @@
     <div class="alert alert-danger">{{ $message }}</div>
     @enderror
     {!! Form::label('tel', 'Номер телефона') !!}
-    {!! Form::text('tel', null, ['class' => 'form-control']) !!}
+    {!! Form::text('tel', null, ['class' => 'form-control', 'placeholder' => 'xxx xxx xx xx']) !!}
     @error('tel')
     <div class="alert alert-danger">{{ $message }}</div>
     @enderror

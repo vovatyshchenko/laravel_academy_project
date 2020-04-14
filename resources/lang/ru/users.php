@@ -1,11 +1,11 @@
 <?php
     return [
         'nav' => [
-            'home' => 'ГЛАВНАЯ',
-            'users' => 'ПОЛЬЗОВАТЕЛИ',
-            'about' => 'О КОМПАНИИ',
+            'home' => 'HOME',
+            'users' => 'USERS',
+            'about' => 'ABOUT',
         ],
-        'title' => 'СПИСОК ПОЛЬЗОВАТЕЛЕЙ',
-        'buttonBack' => 'назад',
-        'buttonMore' => 'еще',
+        'title' => 'USER LIST',
+        'buttonBack' => 'back',
+        'buttonMore' => 'more',
     ];

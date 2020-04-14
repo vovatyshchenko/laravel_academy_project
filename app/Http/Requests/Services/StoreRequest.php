@@ -25,7 +25,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'name' => 'required|max:100|min:2',
-            'price' => 'required|numeric|max:5',
+            'price' => 'required|numeric',
         ];
     }
 
@@ -37,7 +37,6 @@ class StoreRequest extends FormRequest
             'name.min'  => 'Поле должно содержать более 2-х символов',
             'price.required'  => 'Поле обязательно для заполнения',
             'price.numeric'  => 'Поле должно содержать только цифры',
-            'price.max' => 'Поле не может содержать более 5 символов',
         ];
     }
 }

@@ -25,7 +25,7 @@ class EditRequest extends FormRequest
     {
         return [
             'name' => 'required|max:100|min:2',
-            'tel' => 'required|numeric|max:100',
+            'tel' => 'required|numeric',
             'master_id' => 'integer',
             'service' => 'required',
             'date' => 'required|date',
@@ -40,7 +40,6 @@ class EditRequest extends FormRequest
             'name.min'  => 'Поле должно содержать более 2-х символов',
             'tel.required' => 'Поле обязательно для заполнения',
             'tel.numeric' => 'Поле дата содержит не корректное зачение',
-            'tel.max' => 'Поле не может содержать более 100 символов',
             'master_id.integer' => 'Выберите мастера',
             'service.required' => 'Услуга не выбрана',
             'date.required' => 'Поле обязательно для заполнения',
